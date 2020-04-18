@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.SchemaFragment {display:block;page-break-after: avoid;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-color: #E0E0E0; border-style:solid; border-width:1px;background-color: #E0E0E0;margin-bottom: 0in;font-size: 9.0pt;}
+.SchemaFragmentLast {display:block;page-break-after: auto;margin-bottom: 4mm;}
+.KeepWithNext {display:block;page-break-after: avoid;margin-top: 4mm;margin-bottom: 0in;}
+.ListBullet {display:block;}
+.Heading3 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 13.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+.Non-normativeBracket {display:inline;font-style: italic;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_1 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="tblpPr.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading3 Normal DocDefaults "> <a name="_Toc147895775_1" /><a name="book35d51333-ddb2-4a2b-850c-ee1418b77ff0_1" /><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Floating Table Positioning)</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This element specifies information about the current </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> with regard to floating tables. </span></span><span class="DefaultParagraphFont ">Floating tables</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> are tables in a document which are not part of the main text flow in the document, and are instead absolutely positioned with a specific size and </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> relative to non-frame content in the current document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The first piece of information specified by the </span></span><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element is that the current </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is actually a floating table. This information is specified simply by the presence of the </span></span><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element in table's properties. If the </span></span><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element is omitted, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall not floating in the document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The second piece of information is the positioning of the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, which is specified by the attribute values stored on the </span></span><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element. In all absolute positioning cases, the positioning of the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is relative to its top-left corner position. For relative positioning (e.g. center), the positioning of the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is relative to its entire frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Note that the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> still has a logical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the file (its location within the block-level elements in the document). This logical location shall be used to calculate the </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> relative to a paragraph, using the </span></span><a href="next.html"><span class="Hyperlink DefaultParagraphFont ">next</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> regular (non-table, non-frame) paragraph in the document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which is positioned three inches from the edge of the page extents on both its top and left edges (i.e. the top-left corner occurs at 3" x 3"). This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:tblpPr w:leftFromText="144" w:rightFromText="144" w:topFromText="144" w:bottomFromText="144" w:vertAnchor="page" w:horzAnchor="page" w:tblpX="4320" w:tblpY="4320"/&gt;</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …&lt;/w:</span></span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The presence of the </span></span><span class="DefaultParagraphFont ">tblpPr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element dictates that this </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and its attributes specify that the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be anchored </span></span><span class="DefaultParagraphFont ">4320</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point (</span></span><span class="DefaultParagraphFont ">3 inches</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">) from the top and left edges of the current </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 100%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Parent Elements</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.7.5.3</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.7.5.4</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.4.55</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.4.56</span><span class="DefaultParagraphFont ">)</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 20%;" /><col style="width: 80%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Attributes</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">bottomFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Distance From Bottom of Table to Text)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and the top of text in the paragraph which is below this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any text on its bottom side. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:bottomFromText="720" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">bottomFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">] </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">horzAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Table Horizontal Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the base </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from which the horizontal positioning in the </span></span><span class="DefaultParagraphFont ">tblpX</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and/or </span></span><span class="DefaultParagraphFont ">tblpXSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute should be calculated.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">A floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> may be horizontally positioned relative to:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The vertical edge of the page before any runs of text (the left edge for left-to-right paragraphs, the right edge for right-to-left paragraphs)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The vertical edge of the text margin before any runs of text (the left edge for left-to-right paragraphs, the right edge for right-to-left paragraphs)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The vertical edge of the text margin for the column in which the anchor paragraph is located  </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned one inch to the right of its column in a left-to-right document. This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:tblpX="1440" w:horzAnchor="column" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">These </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> properties specify that they are relative to the current  </span></span><span class="DefaultParagraphFont ">column</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and that relative to that column, the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> should be </span></span><span class="DefaultParagraphFont ">1440</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_HAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_HAnchor</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.40</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">leftFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Distance From Left of Table to Text)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and the edge of text in the paragraph which is to the left of this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any text on its left. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:leftFromText="720" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">leftFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">rightFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> ((Distance From Right of Table to Text)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and the edge of text in the paragraph which is to the right of this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any text on its right. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:rightFromText="720" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">rightFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">tblpX</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Absolute Horizontal Distance From Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies an absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the floating table. This absolute </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the horizontal anchor specified by the </span></span><span class="DefaultParagraphFont ">horzAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This value is expressed in twentieths of a point. If it is positive, then the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned after the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of horizontal text flow in this document. If it is negative, then the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned before the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of horizontal text flow in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the </span></span><span class="DefaultParagraphFont ">tblpXSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is also specified, then this value is ignored. If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a floating table:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:tblpPr … w:horizAnchor="page" w:tblpX="1643"/&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it should be located exactly </span></span><span class="DefaultParagraphFont ">1643</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point after the vertical edge of the page (from the </span></span><span class="DefaultParagraphFont ">horizAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.88</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">tblpXSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Relative Horizontal Alignment From Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies a relative horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the floating table. This relative </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the horizontal anchor specified by the </span></span><span class="DefaultParagraphFont ">horizAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If omitted, this attribute is not specified and the value of the </span></span><span class="DefaultParagraphFont ">tblpX</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute determines the absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the floating table. If specified, the </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for this attribute supersedes any value which is specified in the </span></span><span class="DefaultParagraphFont ">tblpX</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute, and that value is ignored.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a floating table:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:tblpPr … w:horizAnchor="page" w:tblpX="1643" w:tblpXSpec="left"/&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it has a horizontal placement of exactly </span></span><span class="DefaultParagraphFont ">1643</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point relative to the page, but that exact placement is overridden by the presence of the </span></span><span class="DefaultParagraphFont ">tblpXSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute to place the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> on the </span></span><span class="DefaultParagraphFont ">left</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> side of the page. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_XAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_XAlign</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.114</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">tblpY</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Absolute Vertical Distance From Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies an absolute vertical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the floating table. This absolute </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the vertical anchor specified by the </span></span><span class="DefaultParagraphFont ">vertAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This value is expressed in twentieths of a point. If it is positive, then the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned after the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of vertical text flow in this document. If it is negative, then the floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned before the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of vertical text flow in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the </span></span><span class="DefaultParagraphFont ">tblpYSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is also specified, then this value is ignored. If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a floating table:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:tblpPr … w:vertAnchor="text" w:tblpY="73" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it should be located exactly </span></span><span class="DefaultParagraphFont ">79</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point below the top vertical edge of the anchor's paragraph's </span></span><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (from the </span></span><span class="DefaultParagraphFont ">vertAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute), assuming that the vertical text direction is top to bottom. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.88</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">tblpYSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Relative Vertical Alignment from Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies a relative vertical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the floating table. This relative </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the vertical anchor specified by the </span></span><span class="DefaultParagraphFont ">vertAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If omitted, this attribute is not specified and the value of the </span></span><span class="DefaultParagraphFont ">tblpY</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute determines the absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the floating table. If specified, the </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for this attribute supersedes any value which is specified in the </span></span><span class="DefaultParagraphFont ">tblpY</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute, and that value is ignored, unless the </span></span><span class="DefaultParagraphFont ">vertAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is set to </span></span><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont ">, in which case any relative positioning is not allowed, and is itself ignored.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a floating table:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:tblpPr … w:vertAnchor="margin" w:tblpY="73" w:tblpYSpec="center"/&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tbl.html"><span class="Hyperlink DefaultParagraphFont ">tbl</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it has a vertical placement of exactly </span></span><span class="DefaultParagraphFont ">73</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point relative to the top </span></span><span class="DefaultParagraphFont ">margin</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, but that exact placement is overridden by the presence of the </span></span><span class="DefaultParagraphFont ">tblpYSpec</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute to place the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the </span></span><span class="DefaultParagraphFont ">center</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the margin. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_YAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_YAlign</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.115</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">topFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Distance From Top of Table to Text)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and the bottom edge of text in the paragraph which is above this floating table.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any text above it. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:topFromText="720" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">topFromText</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">vertAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Table Vertical Anchor)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the base </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from which the vertical positioning in the </span></span><span class="DefaultParagraphFont ">tblpY</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute should be calculated.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">A floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> may be horizontally positioned relative to:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the page before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the text margin before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the page before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned two inches below the page top in a top-to-bottom document. This floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:tblpPr … w:tblpY="2880" w:vertAnchor="page" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="tblPr.html"><span class="Hyperlink DefaultParagraphFont ">tblPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">These floating </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> properties specify that they are relative to the anchor </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and that relative to that page, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> should be </span></span><span class="DefaultParagraphFont ">2880</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point in the direction of the flow of text (down, in this case). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_VAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_VAnchor</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.109</span><span class="DefaultParagraphFont ">).</span></p></td></tr></tbody></table>
+  
+  <p class="KeepWithNext Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The following </span></span><a href="XML.html"><span class="Hyperlink DefaultParagraphFont ">XML</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Schema fragment defines the contents of this element:</span></span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;complexType </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="CT_TblPPr"&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="leftFromText" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="rightFromText" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="topFromText" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="bottomFromText" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="vertAnchor" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_VAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_VAnchor</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="horzAnchor" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_HAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_HAnchor</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="tblpXSpec" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_XAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_XAlign</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="tblpX" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="tblpYSpec" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_YAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_YAlign</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="tblpY" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont ">"/&gt;</span></p>
+  
+  <p class="SchemaFragmentLast SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont ">&lt;/complexType&gt;</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

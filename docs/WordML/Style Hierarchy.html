@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.ListBullet {display:block;}
+.Heading3 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 13.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="Style Hierarchy.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading3 Normal DocDefaults "> <a name="_Toc147895886_1" /><span class="DefaultParagraphFont ">Style Hierarchy</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">With the various flavors of </span></span><a href="styles.html"><span class="Hyperlink DefaultParagraphFont ">styles</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> available (see each of the subclauses below), multiple style types can be applied to the same content within a file, which means that properties must be applied in a specific deterministic order. As with inheritance, the resulting formatting properties set by one </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> can be unchanged, removed, or altered by following types.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The following </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> illustrates the order of application of these defaults, and which properties are impacted by each:</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="296" id="rId8" src="Style Hierarchy_files/f5abd440-a00e-472c-b5ac-0d55aadf811aimage34.png" width="504" /></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This process can be described as follows:</span></p>
+  
+  <p class="ListBullet Normal DocDefaults " style="position: relative; margin-left: 0.5in;text-indent: -0.25in;">•  <span class="DefaultParagraphFont ">First, the document defaults are applied to all runs and paragraphs in the document.</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Next, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> style properties are applied to each </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document, following the conditional formatting inclusions and exclusions specified per table.</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Next, numbered item and paragraph properties are applied to each paragraph formatted with a </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> style.</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">Next, paragraph and run properties are applied to each paragraph as defined by the paragraph style.</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">Next, run properties are applied to each run with a specific character style applied.</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Finally, we apply direct formatting (paragraph or run properties not from styles). If this direct formatting includes </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, that </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> + the associated paragraph properties are applied.</span></span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

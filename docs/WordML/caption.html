@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.SchemaFragment {display:block;page-break-after: avoid;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-color: #E0E0E0; border-style:solid; border-width:1px;background-color: #E0E0E0;margin-bottom: 0in;font-size: 9.0pt;}
+.SchemaFragmentLast {display:block;page-break-after: auto;margin-bottom: 4mm;}
+.KeepWithNext {display:block;page-break-after: avoid;margin-top: 4mm;margin-bottom: 0in;}
+.ListBullet {display:block;}
+.Heading4 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;color: #4F81BD;font-family: Cambria;font-size: 12.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+.Codefragment {display:inline;font-family: Consolas;}
+.Attributevalue {display:inline;font-family: Consolas;font-size: 10.0pt;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_1 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_2 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_3 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_4 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_5 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="caption.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading4 Normal DocDefaults "> <a name="_Toc147896144_1" /><a name="bookae745c21-fe62-4e2f-91b4-08c321a95561_1" /><span class="DefaultParagraphFont ">caption</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Single Caption Type Definition)</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This element specifies the contents and positioning for </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which may be used to automatically label objects in a WordprocessingML document. A </span></span><span class="DefaultParagraphFont ">caption</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a string that labels an </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> included in a WordprocessingML document, and typically consists of a string plus a field which numbers this item within a collection of similar objects.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the diagram below illustrating a WordprocessingML document containing a </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that has been labeled with a caption:</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="205" id="rId8" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image98.png" width="158" /></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In this diagram, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contained in the WordprocessingML document has been labeled by inserting a caption below the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consisting of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by a field whose </span></span><a href="result.html"><span class="Hyperlink DefaultParagraphFont ">result</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a decimal number. The settings which automatically produced this form of caption are specified using the following WordprocessingML fragment:</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:caption w:name="Table" w:</span></span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont ">="decimal" /&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">caption</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element specifies the parameters for the resulting caption to be used to automatically label content within the WordprocessingML document. Specifically, the </span></span><span class="DefaultParagraphFont ">name</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attributes specify that </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of this </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> inserted in the given WordprocessingML document shall consist of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by an incrementing decimal number field. In addition, the </span></span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that these </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be placed below the </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> they are used to label. </span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">WordprocessingML is designed such that the </span></span><span class="DefaultParagraphFont ">caption</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element may be used in conjunction with applications to provide a dynamic captioning experience. In other words, an application may use the WordprocessingML in the example above to automatically insert a caption consisting of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by an incrementing decimal number field below tables when tables are inserted into a WordprocessingML document as defined by the </span></span><a href="autoCaption.html"><span class="Hyperlink DefaultParagraphFont ">autoCaption</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element (§</span></span><span class="DefaultParagraphFont ">2.15.1.7</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 100%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Parent Elements</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.15.1.17</span><span class="DefaultParagraphFont ">)</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 20%;" /><col style="width: 80%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Attributes</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">chapNum</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Include Chapter Number in Field for Caption)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies whether or not to display </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> associated with the most recent chapter heading in the WordprocessingML document within the caption field. A </span></span><span class="DefaultParagraphFont ">chapter heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a paragraph of text within a WordprocessingML document that is formatted with a style that has been specified by the </span></span><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute to demarcate chapters in documents.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Only a style with its </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">Heading1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading3</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading4</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading5</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading6</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading7</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Heading8</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, or </span></span><span class="DefaultParagraphFont ">Heading9</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> may be specified as the style used to demarcate chapters in a document. The choice of which of these heading levels shall be used to determine the current chapter number is defined by the value of the corresponding </span></span><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute. [</span></span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: </span></span><span class="DefaultParagraphFont ">Heading1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is used as the chapter heading when </span></span><span class="DefaultParagraphFont ">chapNum</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">true</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">If this attribute is omitted, then chapter numbers shall not be included in the resulting caption.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the diagram below:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;vertical-align: top;border-collapse: collapse;width: 4.81in;"><colgroup><col style="width: 49.24%;" /><col style="width: 50.76%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="205" id="rId9" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image83.png" width="159" /></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="211" id="rId10" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image84.png" width="164" /></span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This diagram depicts a WordprocessingML document containing two chapters, each containing two tables labeled with captions. The Heading 2 style has been associated with chapter headings and applied to the strings: </span></span><span class="DefaultParagraphFont ">Chapter 1 - FY02</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">Chapter 2 - FY03</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifically, the style used to demarcate chapters, is the style with a </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">Heading2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> as specified by the </span></span><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute value of </span></span><span class="Attributevalue Codefragment DefaultParagraphFont ">2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the WordprocessingML for this caption, defined as follows:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Table" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:chapNum="true" w:heading="2" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="upperCase" w:sep="8212" /&gt; </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">chapNum</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute has a value of </span></span><span class="DefaultParagraphFont ">true</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, specifying that the </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> used to label the tables within this document will contain a symbol corresponding to the one-based index of the chapter in which it is contained.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This can be seen in that the </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in Chapter 1 contain a </span></span><span class="DefaultParagraphFont ">1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, while the </span></span><a href="captions.html"><span class="Hyperlink DefaultParagraphFont ">captions</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in Chapter 2 contain a </span></span><span class="DefaultParagraphFont ">2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, each corresponding with their respective chapter number. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.67</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Style for Chapter Headings)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies the given style that is used to demarcate chapter headings in a document.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This value is used to </span></span><a href="link.html"><span class="Hyperlink DefaultParagraphFont ">link</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the chapter headings with paragraphs with a </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute as follows:</span></span></p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;vertical-align: top;border-collapse: collapse;width: 4.81in;"><colgroup><col style="width: 49.99%;" /><col style="width: 50.01%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Value</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">1</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading1</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">2</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading2</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">3</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading3</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">4</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading4</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">5</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading5</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">6</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading6</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">7</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading7</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">8</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading8</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">9</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Style with </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of </span></span><span class="DefaultParagraphFont ">Heading9</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Any other value</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Application-defined. May be ignored.</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">1</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the diagram below:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;vertical-align: top;border-collapse: collapse;width: 4.81in;"><colgroup><col style="width: 49.24%;" /><col style="width: 50.76%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="205" id="rId9" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image83.png" width="159" /></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="211" id="rId10" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image84.png" width="164" /></span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This diagram depicts a WordprocessingML document containing two chapters, each containing two tables labeled with captions. The Heading 2 style has been associated with chapter headings and applied to the strings: </span></span><span class="DefaultParagraphFont ">Chapter 1 - FY02</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">Chapter 2 - FY03</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifically, the style used to demarcate chapter headings is the style with its </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">Heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">" as specified by the </span></span><span class="DefaultParagraphFont ">heading</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute value of </span></span><span class="Attributevalue Codefragment DefaultParagraphFont ">2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the WordprocessingML below. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Table" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:chapNum="On" w:heading="2" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont ">="upperCase" w:sep="8212" /&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In other words, the WordprocessingML above may be used to label tables inserted in a given WordprocessingML document generated by an application with a caption consisting of: the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by a decimal number corresponding with the chapter number in which the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is present, a dash as defined in the </span></span><span class="DefaultParagraphFont ">sep</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute, and a capital English letter defined by the </span></span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute corresponding with the given table's ordering within the current chapter. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_DecimalNumber.html"><span class="Hyperlink DefaultParagraphFont ">ST_DecimalNumber</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.16</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Caption Type Name)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies the literal string component of this caption.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This value is used as follows:</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">It is added to the field containing the chapter number and item number of this </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> when a caption is automatically added to the document.</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">It is used to uniquely label this caption </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, allowing it to be linked with classes of objects via the </span></span><a href="autoCaption.html"><span class="Hyperlink DefaultParagraphFont ">autoCaption</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element (§</span></span><span class="DefaultParagraphFont ">2.15.1.7</span><span class="DefaultParagraphFont ">)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">It may be used to label this caption </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in a user interface.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the diagram below illustrating a WordprocessingML document containing a </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that has been labeled with a caption:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="205" id="rId8" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image98.png" width="158" /></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In this diagram, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contained in the WordprocessingML document has been labeled by inserting a caption below the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consisting of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by a decimal number. This caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified with the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Table" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont ">="decimal" /&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifically, the </span></span><span class="DefaultParagraphFont ">name</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the first part of the string that comprises the give caption shall consist of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_String.html"><span class="Hyperlink DefaultParagraphFont ">ST_String</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.89</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">noLabel</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Do Not Include Name In Caption)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies if the string specified in the name attribute shall be included in the resulting caption when it is automatically added to the document. If set to true, then the label text in the name attribute is omitted when adding the caption.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">If this attribute is omitted, then the name shall be added to the caption.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the diagram below illustrating a WordprocessingML document containing a </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that has been labeled with a caption:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="203" id="rId11" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image99.png" width="162" /></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In this diagram, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contained in the WordprocessingML document has been labeled by inserting a caption below the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consisting of only a decimal number. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Custom" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:noLabel="true" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="decimal" /&gt; </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Here, the </span></span><span class="DefaultParagraphFont ">noLabel</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is equal to </span></span><span class="DefaultParagraphFont ">true</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifying that when this caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is automatically added, it shall not include the label. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.67</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Caption </span></span><a href="Numbering.html"><span class="Hyperlink DefaultParagraphFont ">Numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Format)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which shall be included in an automatically generated caption to specify the index of this item in that collection (within the current chapter if </span></span><span class="DefaultParagraphFont ">chapNum</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><span class="DefaultParagraphFont ">is specified, or within the current document story).</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its default value shall be assumed to be </span></span><span class="DefaultParagraphFont ">decimal</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the diagram below illustrating a WordprocessingML document containing a </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that has been labeled with a caption:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="203" id="rId11" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image99.png" width="162" /></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In this example, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contained in the WordprocessingML document has been labeled by inserting a caption below the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consisting of only a decimal number. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Custom" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:noLabel="true" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="decimal" /&gt; </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Here, the </span></span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is equal to </span></span><span class="DefaultParagraphFont ">decimal</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, specifying that a decimal number shall be included in the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> caption when it is automatically inserted. </span></span><span class="DefaultParagraphFont ">End Example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_NumberFormat.html"><span class="Hyperlink DefaultParagraphFont ">ST_NumberFormat</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.66</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Automatic Caption Placement)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies how an automatically inserted caption shall be positioned relative to the </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that it is captioning.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then the default value shall be </span></span><span class="DefaultParagraphFont ">below</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the diagram below illustrating a WordprocessingML document containing a </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">that has been labeled with a </span></span><span class="DefaultParagraphFont ">caption</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="206" id="rId8" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image98.png" width="159" /></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In this diagram, the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contained in the WordprocessingML document has been labeled by inserting a caption below the </span></span><a href="table.html"><span class="Hyperlink DefaultParagraphFont ">table</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consisting of the string </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> followed by a decimal number. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Table" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="decimal" /&gt; </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">attribute specifies that the given </span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">caption shall be placed </span></span><span class="DefaultParagraphFont ">below</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> it is labelling. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_CaptionPos.html"><span class="Hyperlink DefaultParagraphFont ">ST_CaptionPos</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.8</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">sep</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Chapter Number/Item Index Separator)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the character which shall be used to separate the chapter number used in this caption from the caption item numbering. A caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> consists of three components:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The (optional) literal string</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The (optional) chapter number</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The index of this caption within the chapter/document</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">When the latter two items are both present, they are delimited using the chapter </span></span><a href="separator.html"><span class="Hyperlink DefaultParagraphFont ">separator</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specified by this attribute.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its default value shall be </span></span><span class="DefaultParagraphFont ">hyphen</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. If the chapter number is not part of the caption </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont ">, then this parameter shall be ignored.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the diagram below:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;vertical-align: top;border-collapse: collapse;width: 4.81in;"><colgroup><col style="width: 49.24%;" /><col style="width: 50.76%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="205" id="rId9" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image83.png" width="159" /></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><img height="211" id="rId10" src="caption_files/f00a4fff-516b-46f1-b196-c7e47f717c06image84.png" width="164" /></span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This diagram depicts a WordprocessingML document containing two chapters, each containing two tables labeled with captions. The Heading 2 style has been associated with chapter headings and applied to the strings: </span></span><span class="DefaultParagraphFont ">Chapter 1 - FY02</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">Chapter 2 - FY03</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifically, the style used to demarcate chapter headings is the style with a </span></span><span class="DefaultParagraphFont ">styleID</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">Heading2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> as specified by the heading attribute value of </span></span><span class="Attributevalue Codefragment DefaultParagraphFont ">2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the WordprocessingML below. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:caption w:name="Table" w:</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont ">="below" w:chapNum="On" w:heading="2" w:</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont ">="upperCase" w:sep="hyphen" /&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">sep</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute value of </span></span><span class="DefaultParagraphFont ">hyphen</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that the chapter number and caption index shall be separated by a hyphen character when displayed in the document. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_ChapterSep.html"><span class="Hyperlink DefaultParagraphFont ">ST_ChapterSep</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.9</span><span class="DefaultParagraphFont ">).</span></p></td></tr></tbody></table>
+  
+  <p class="KeepWithNext Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The following </span></span><a href="XML.html"><span class="Hyperlink DefaultParagraphFont ">XML</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Schema fragment defines the contents of this element:</span></span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;complexType </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="CT_Caption"&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="</span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_String.html"><span class="Hyperlink DefaultParagraphFont ">ST_String</span></a><span class="DefaultParagraphFont ">" use="required"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="</span><a href="pos.html"><span class="Hyperlink DefaultParagraphFont ">pos</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_CaptionPos.html"><span class="Hyperlink DefaultParagraphFont ">ST_CaptionPos</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="chapNum" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="heading" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_DecimalNumber.html"><span class="Hyperlink DefaultParagraphFont ">ST_DecimalNumber</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="noLabel" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="</span><a href="numFmt.html"><span class="Hyperlink DefaultParagraphFont ">numFmt</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_NumberFormat.html"><span class="Hyperlink DefaultParagraphFont ">ST_NumberFormat</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="sep" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_ChapterSep.html"><span class="Hyperlink DefaultParagraphFont ">ST_ChapterSep</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragmentLast SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont ">&lt;/complexType&gt;</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+.IndentedElementTable {display:table;position: relative; margin-left: 0.5in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.Grammar {display:block;position: relative; margin-left: 0.75in;text-indent: -0.25in;margin-bottom: 0.08in;line-height: 104%;font-style: italic;}
+.Heading4 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;color: #4F81BD;font-family: Cambria;font-size: 12.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="SEQ.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading4 Normal DocDefaults "> <a name="_Ref124060653_1" /><a name="_Toc129769435_1" /><a name="_Toc133914865_1" /><a name="_Toc134495659_1" /><a name="_Toc147896413_1" /><span class="DefaultParagraphFont ">SEQ</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Syntax</span><span class="DefaultParagraphFont ">:</span></p>
+  
+  <p class="Grammar Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">SEQ </span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> identifier  </span></span><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> field-argument</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><span class="DefaultParagraphFont ">]</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> switches </span></span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description:</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Sequentially numbers chapters, tables, figures, and other user-defined lists of items in a document. If an item and its </span></span><span class="DefaultParagraphFont ">SEQ</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> field are added, deleted, or moved, updating the remaining </span></span><span class="DefaultParagraphFont ">SEQ</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> fields in the document reflects the new sequence. A </span></span><span class="DefaultParagraphFont ">SEQ</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> field in a header, footer, annotation, or </span></span><a href="footnote.html"><span class="Hyperlink DefaultParagraphFont ">footnote</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall NOT affect the sequence </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> that results from </span></span><span class="DefaultParagraphFont ">SEQ</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> fields in the document text. </span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: The </span></span><a href="LISTNUM.html"><span class="Hyperlink DefaultParagraphFont ">LISTNUM</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> field also produces automatic </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and may be a better alternative when creating a complex numbered list. </span></span><span class="DefaultParagraphFont ">end note</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">identifier</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is the name assigned to the series of items that are to be numbered. [</span></span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: </span></span><span class="DefaultParagraphFont ">identifier</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> might be </span></span><span class="DefaultParagraphFont ">Equation</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Figure</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, or </span></span><span class="DefaultParagraphFont ">Thing</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, as the user deems appropriate for a caption. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">] </span></span><span class="DefaultParagraphFont ">identifier</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall </span></span><a href="start.html"><span class="Hyperlink DefaultParagraphFont ">start</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> with a Latin letter and shall consist of no more than 40 Latin letters, Arabic digits, and underscores. (See the </span></span><a href="TOC.html"><span class="Hyperlink DefaultParagraphFont ">TOC</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> field (§</span></span><span class="DefaultParagraphFont ">2.16.5.75</span><span class="DefaultParagraphFont ">) switches </span><span class="DefaultParagraphFont ">\c</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">\s</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for uses of </span></span><span class="DefaultParagraphFont ">identifier</span><span class="DefaultParagraphFont ">.)</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in </span></span><span class="DefaultParagraphFont ">field-argument</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies a bookmark name that refers to an item elsewhere in the document rather than in the current location.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Field Value</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: The </span></span><a href="next.html"><span class="Hyperlink DefaultParagraphFont ">next</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> number in the sequence.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Switches</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Zero or one of the </span></span><span class="DefaultParagraphFont ">numeric-formatting-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">es, or zero or more of the following </span></span><span class="DefaultParagraphFont ">field-specific-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">es. If no </span></span><span class="DefaultParagraphFont ">numeric-formatting-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is present, </span></span><span class="DefaultParagraphFont ">\* Arabic</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is used. </span></span></p>
+  
+  <table class="IndentedElementTable ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0.5in;vertical-align: top;border-collapse: collapse;width: 6.32in;"><colgroup><col style="width: 21.95%;" /><col style="width: 78.05%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">\c</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Repeats the closest preceding sequence number. [</span><span class="DefaultParagraphFont ">Note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: This is useful for inserting chapter numbers in headers or footers. </span></span><span class="DefaultParagraphFont ">end note</span><span class="DefaultParagraphFont ">]</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">\h</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Hides the field </span></span><a href="result.html"><span class="Hyperlink DefaultParagraphFont ">result</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> unless a </span></span><span class="DefaultParagraphFont ">general-formatting-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is also present.[</span></span><span class="DefaultParagraphFont ">Note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: This switch can be used to refer to a SEQ field in a cross-reference without printing the number. </span></span><span class="DefaultParagraphFont ">end note</span><span class="DefaultParagraphFont ">]</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">\n</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Inserts the </span></span><a href="next.html"><span class="Hyperlink DefaultParagraphFont ">next</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> sequence number for the specified item. This is the default.</span></span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">\r </span></span><span class="DefaultParagraphFont ">field-argument</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Resets the sequence number to the integer number specified by </span></span><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in this switch's </span></span><span class="DefaultParagraphFont ">field-argument</span><span class="DefaultParagraphFont ">.</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">\s </span></span><span class="DefaultParagraphFont ">field-argument</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Resets the sequence number to the built-in (integer) heading level specified by </span></span><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in this switch's </span></span><span class="DefaultParagraphFont ">field-argument</span><span class="DefaultParagraphFont ">.</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: When the following fields are updated:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">SEQ Figure</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure \* roman</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure \n</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure \c : …</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure \h : …</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure \r 1</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">SEQ Figure</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">the results are:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">Figure 1</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure ii</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure 3</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure 3: …</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure : …</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure 5</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure 10</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">Figure 11</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

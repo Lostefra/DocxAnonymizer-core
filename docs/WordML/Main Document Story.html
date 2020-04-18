@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.ListBullet {display:block;}
+.Heading2 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 14.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="Main Document Story.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading2 Normal DocDefaults "> <a name="_Toc147895593_1" /><a name="_Toc147905007_1" /><a name="TOCSection11_1" /><span class="DefaultParagraphFont ">Main Document Story</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">A WordprocessingML document consists of a compilation of two types of information:</span></p>
+  
+  <p class="ListBullet Normal DocDefaults " style="position: relative; margin-left: 0.5in;text-indent: -0.25in;">•  <span class="DefaultParagraphFont ">Properties [</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: </span></span><a href="styles.html"><span class="Hyperlink DefaultParagraphFont ">styles</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> definitions, etc. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">Stories [</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: main document, </span></span><a href="comments.html"><span class="Hyperlink DefaultParagraphFont ">comments</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, headers, etc. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">In WordprocessingML,</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> stories</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> are defined as each unique region of content within a document into which the user can type. The most important story in a WordprocessingML document is the main document story, which contains the primary contents of the document. The main document story in WordprocessingML is stored inside the </span></span><a href="body.html"><span class="Hyperlink DefaultParagraphFont ">body</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider a document with a single paragraph in the main document story. This document would require the following WordprocessingML in its main document part:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="document.html"><span class="Hyperlink DefaultParagraphFont ">document</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="body.html"><span class="Hyperlink DefaultParagraphFont ">body</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="body.html"><span class="Hyperlink DefaultParagraphFont ">body</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="document.html"><span class="Hyperlink DefaultParagraphFont ">document</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The fact that the paragraph is inside the </span></span><a href="body.html"><span class="Hyperlink DefaultParagraphFont ">body</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element makes it part of the main document story. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

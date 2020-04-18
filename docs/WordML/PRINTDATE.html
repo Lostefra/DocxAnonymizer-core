@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+.IndentedElementTable {display:table;position: relative; margin-left: 0.5in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.Grammar {display:block;position: relative; margin-left: 0.75in;text-indent: -0.25in;margin-bottom: 0.08in;line-height: 104%;font-style: italic;}
+.Heading4 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;color: #4F81BD;font-family: Cambria;font-size: 12.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="PRINTDATE.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading4 Normal DocDefaults "> <a name="_Ref125370083_1" /><a name="_Toc129769426_1" /><a name="_Toc133914856_1" /><a name="_Toc134495650_1" /><a name="_Toc147896404_1" /><span class="DefaultParagraphFont ">PRINTDATE</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Syntax</span><span class="DefaultParagraphFont ">:</span></p>
+  
+  <p class="Grammar Normal DocDefaults "><span class="DefaultParagraphFont ">PRINTDATE</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> switches </span></span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description:</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Retrieves the date and time on which the document was last printed, as recorded in the </span></span><span class="DefaultParagraphFont ">LastPrinted</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element of the Core File Properties part. By default, the Gregorian </span></span><a href="calendar.html"><span class="Hyperlink DefaultParagraphFont ">calendar</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is used and the </span></span><span class="DefaultParagraphFont ">date-and-time-formatting-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> used is implementation-defined. For a document that has never been printed, the date and time corresponds to </span></span><span class="DefaultParagraphFont ">0000-00-00T00:00:00</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> local time and each text component is </span></span><span class="DefaultParagraphFont ">XXX</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Field Value</span><span class="DefaultParagraphFont ">: The date and time on which the document was last printed.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Switches</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Zero or one </span></span><span class="DefaultParagraphFont ">date-and-time-formatting-switch</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and zero or one of the following </span></span><span class="DefaultParagraphFont ">field-specific-switch</span><span class="DefaultParagraphFont ">es.</span></p>
+  
+  <table class="IndentedElementTable ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0.5in;vertical-align: top;border-collapse: collapse;width: 6.32in;"><colgroup><col style="width: 7.83%;" /><col style="width: 92.17%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">\h</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Use the Hijri/Lunar calendar.</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">\s</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Use the Saka Era calendar.</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the case in which the </span></span><span class="DefaultParagraphFont ">LastPrinted</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element is as follows:</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;LastPrinted&gt;2006-01-06T19:58:00Z&lt;/LastPrinted&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">and the following fields are updated in a US-English context that is UTC -5:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">PRINTDATE</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">PRINTDATE</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> \@ "dddd, MMMM dd, yyyy  HH:mm:ss"</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">the results are:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">1/6/2006</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> 2:58:00 PM</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Friday, </span></span><span class="DefaultParagraphFont ">January 06, 2006</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> 14:58:00</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">For a document that has never been printed, the </span></span><a href="result.html"><span class="Hyperlink DefaultParagraphFont ">result</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is:</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">0/0/0000 0:00:00 AM</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">XXX, XXX 00, 0000  00:00:00</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

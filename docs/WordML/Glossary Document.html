@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.Heading2 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 14.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="Glossary Document.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading2 Normal DocDefaults "> <a name="_Toc147896014_1" /><a name="_Toc147905017_1" /><a name="TOCSection28_1" /><span class="DefaultParagraphFont ">Glossary Document</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Within a WordprocessingML file, the </span></span><span class="DefaultParagraphFont ">glossary document</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a supplemental storage location for additional document content which shall travel with the document, but which shall not be displayed for printed as part of the main document until it is explicitly added to that document by deliberate action.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The glossary document shall also be afforded a separate instance of all of the relationships which are provided on the main document part - this means that the glossary document shall have its own style definitions, </span></span><a href="numbering.html"><span class="Hyperlink DefaultParagraphFont ">numbering</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> definitions, </span></span><a href="comments.html"><span class="Hyperlink DefaultParagraphFont ">comments</span></a><span class="DefaultParagraphFont ">, headers, footers, etc. within the WordprocessingML document.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a document which shall include ten optional clauses that may be inserted through a user interface. It is clearly not desirable to have these ten clauses appear in the main document story's contents before they are explicitly inserted, therefore each of them may be stored in the glossary document and inserted via the user interface as needed. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Within the glossary document, each distinct region of document content is referred to as a </span></span><span class="DefaultParagraphFont ">glossary document entry</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and is defined via the </span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element (§</span></span><span class="DefaultParagraphFont ">2.12.5</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">). These document parts may contain any block-level WordprocessingML element, and may also have a set of classifications and </span></span><a href="behaviors.html"><span class="Hyperlink DefaultParagraphFont ">behaviors</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> applied to them via the glossary document entry's properties.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following definition for the contents of a glossary document part within a WordprocessingML document:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="glossaryDocument.html"><span class="Hyperlink DefaultParagraphFont ">glossaryDocument</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="docParts.html"><span class="Hyperlink DefaultParagraphFont ">docParts</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">      &lt;w:</span></span><a href="docPartPr.html"><span class="Hyperlink DefaultParagraphFont ">docPartPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">        …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">      &lt;/w:</span></span><a href="docPartPr.html"><span class="Hyperlink DefaultParagraphFont ">docPartPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">      &lt;w:</span></span><a href="docPartBody.html"><span class="Hyperlink DefaultParagraphFont ">docPartBody</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">        &lt;w:</span></span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">          &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">            &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Sample entry.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">          &lt;/w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">        &lt;/w:</span></span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">      &lt;/w:</span></span><a href="docPartBody.html"><span class="Hyperlink DefaultParagraphFont ">docPartBody</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;/w:</span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">      …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;/w:</span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="docParts.html"><span class="Hyperlink DefaultParagraphFont ">docParts</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="glossaryDocument.html"><span class="Hyperlink DefaultParagraphFont ">glossaryDocument</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><a href="glossaryDocument.html"><span class="Hyperlink DefaultParagraphFont ">glossaryDocument</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element (§</span></span><span class="DefaultParagraphFont ">2.12.10</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">) defines the contents of the glossary document part. Within the glossary document, each </span></span><a href="docPart.html"><span class="Hyperlink DefaultParagraphFont ">docPart</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element contains the definition for one glossary document entry: in this case, there are two entries in the glossary document, the first of which contains a single paragraph with a single run of text.  </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

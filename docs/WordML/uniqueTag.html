@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.Heading3 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 13.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="uniqueTag.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading3 Normal DocDefaults "> <a name="_Toc147896125_1" /><a name="bookeb15e6ce-0f8e-4d70-9ed7-383aee6558e6_1" /><span class="DefaultParagraphFont ">uniqueTag</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Unique Value for Record)</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This element specifies the contents of a given record within the specified external data source, in the column containing unique data for every record within the external data source. given external data source. This element is used in conjunction with the </span></span><span class="DefaultParagraphFont ">column</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.14.7</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">) element to maintain a relationship </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the records within an external data source and a given merged WordprocessingML document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The contents of this attribute shall be the base64-encoded value of the unique </span></span><a href="tag.html"><span class="Hyperlink DefaultParagraphFont ">tag</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value as specified by the data source. </span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: This information is necessary as part of a mail merge as records may be added or deleted from external data sources, and a means must be provided to maintain record-specific inclusion or exclusion data using the </span></span><a href="active.html"><span class="Hyperlink DefaultParagraphFont ">active</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element (§</span></span><span class="DefaultParagraphFont ">2.14.1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">) and the affected external data record when the WordprocessingML document is reconnected to the external data source irrespective of the ordering of the records within the external data source. </span></span><span class="DefaultParagraphFont ">end note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">] </span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment for the information about a single record in a source document for a mail merge:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="recipientData.html"><span class="Hyperlink DefaultParagraphFont ">recipientData</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">  &lt;w:</span><a href="active.html"><span class="Hyperlink DefaultParagraphFont ">active</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> w:val="0" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="column.html"><span class="Hyperlink DefaultParagraphFont ">column</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> w:val="12" /&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:uniqueTag w:val="258865469" /&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="recipientData.html"><span class="Hyperlink DefaultParagraphFont ">recipientData</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The external data record associated with this information is specified via the column in the external data source corresponding to the </span></span><span class="DefaultParagraphFont ">column</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element with a </span></span><span class="DefaultParagraphFont ">val</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">12</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, which contains a row whose value in this column has a value corresponding to the </span></span><span class="DefaultParagraphFont ">uniqueTag</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element with a </span></span><span class="DefaultParagraphFont ">val</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">258865469</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. This record will not be imported into the merged WordprocessingML document as the </span></span><a href="active.html"><span class="Hyperlink DefaultParagraphFont ">active</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.14.1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">) element associated with the given external data record has a </span></span><span class="DefaultParagraphFont ">val</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute equal to </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">In other words, when the specified external data source is connected to, the record within the thirteenth column of the external data source that has the contents </span></span><span class="DefaultParagraphFont ">258865469</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and not populate mapped fields in a merged document with data from that record. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this element are defined by the </span></span><a href="XML.html"><span class="Hyperlink DefaultParagraphFont ">XML</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Schema </span></span><span class="DefaultParagraphFont ">base64Binary</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> datatype.</span></span></p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 100%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Parent Elements</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="recipientData.html"><span class="Hyperlink DefaultParagraphFont ">recipientData</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.14.28</span><span class="DefaultParagraphFont ">)</span></p></td></tr></tbody></table></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+.TableGrid {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;margin-bottom: 0in;line-height: 100%;font-family: Calibri;}
+.ElementTable {display:table;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;}
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.SchemaFragment {display:block;page-break-after: avoid;position: relative; margin-left: 0in;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-color: #E0E0E0; border-style:solid; border-width:1px;background-color: #E0E0E0;margin-bottom: 0in;font-size: 9.0pt;}
+.SchemaFragmentLast {display:block;page-break-after: auto;margin-bottom: 4mm;}
+.KeepWithNext {display:block;page-break-after: avoid;margin-top: 4mm;margin-bottom: 0in;}
+.ListBullet {display:block;}
+.Heading4 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;color: #4F81BD;font-family: Cambria;font-size: 12.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					#docx4j_tbl_0 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+#docx4j_tbl_1 td { border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;height: 5mm;}
+--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="framePr.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading4 Normal DocDefaults "> <a name="_Toc147895609_1" /><a name="bookebcfec7b-41d6-4b08-bb58-fcad51c3c481_1" /><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Text Frame Properties)</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This element specifies information about the current paragraph with regard to </span></span><span class="DefaultParagraphFont ">text frames</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">Text frames</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> are paragraphs of text in a document which are positioned in a separate region or </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document, and can be positioned with a specific size and </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> relative to non-frame paragraphs in the current document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The first piece of information specified by the </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element is that the current paragraph is actually part of a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document. This information is specified simply by the presence of the </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element in paragraph's properties. If the </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element is omitted, the paragraph shall not be part of any text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The second piece of information concerns the set of paragraphs which are part of the current text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document. This is determined based on the attributes on the </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element. If the set of attribute values specified on two adjacent paragraphs is identical, then those two paragraphs shall be considered to be part of the same text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and rendered within the same </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the document.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider a document in which the following two paragraphs are located adjacent to one another:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2191" w:h="811" w:hRule="exact" w:hSpace="180" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1921"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Paragraph One&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2191" w:h="810" w:hRule="exact" w:hSpace="180" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1921"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Paragraph Two.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">These two paragraphs, although each is a part of a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> due to the presence of the </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element, are different text frames because of the differing </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value - </span></span><span class="DefaultParagraphFont ">810</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> vs. </span></span><span class="DefaultParagraphFont ">811</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The positioning of the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> relative to the properties stored on its attribute values shall be calculated relative to the </span></span><a href="next.html"><span class="Hyperlink DefaultParagraphFont ">next</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> paragraphs in the document which is itself not part of a text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider a document in which the following three paragraphs are located adjacent to one another:</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2191" w:h="811" w:hRule="exact" w:hSpace="180" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1921"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Paragraph One&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2191" w:h="811" w:hRule="exact" w:hSpace="180" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1921"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Paragraph Two.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">/&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The first two paragraphs form a single text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, which is anchored using its attribute values relative to the first non-frame paragraph following it (the third paragraph in the example). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 100%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Parent Elements</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.7.4.2</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.9.24</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.3.1.25</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.7.5.1</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.3.1.26</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">); </span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.7.7.2</span><span class="DefaultParagraphFont ">)</span></p></td></tr></tbody></table>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <table class="ElementTable TableGrid " id="docx4j_tbl_0" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;position: relative; margin-left: 0in;table-layout: fixed;vertical-align: top;border-collapse: collapse;width: 7.16in;"><colgroup><col style="width: 20%;" /><col style="width: 80%;" /></colgroup><tbody><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Attributes</span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Description</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">anchorLock</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Lock Frame Anchor to Paragraph)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies that the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall always remain in the same logical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> relative to the non-frame paragraphs which precede and follow it in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This means that consumers which modify this document shall ensure that this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> remains directly above the non-frame paragraph which it is currently above, by adjusting the frame's positioning properties as needed as the paragraph is moved throughout the document rather than moving the frame's logical location within the paragraphs in the document, if that would be more appropriate.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then this </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall not have a </span></span><a href="locked.html"><span class="Hyperlink DefaultParagraphFont ">locked</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> anchor position.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML paragraph contained in a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="exact" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="73" w:anchorLock="1"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> has a </span></span><a href="locked.html"><span class="Hyperlink DefaultParagraphFont ">locked</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> anchor using the </span></span><span class="DefaultParagraphFont ">anchorLock</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute. If the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is moved down in the document, the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> properties must be adjusted to be relative to the parent paragraph's same logical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - the paragraph cannot be relocated in the document, which results in changes to the frame's properties as follows:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="exact" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="-5247" w:anchorLock="1"/&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The non-frame paragraph was relocated </span></span><span class="DefaultParagraphFont ">5320</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point below its original location in the document, and the frame's vertical positioning properties were adjusted to ensure its logical location within the paragraph ordering was constant while its visual location was changed. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.67</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">dropCap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Drop Cap Frame)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies that the current </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> contains a drop cap to be located at the beginning of the </span></span><a href="next.html"><span class="Hyperlink DefaultParagraphFont ">next</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> non-frame paragraph in the document. Its contents shall be used to specify how that drop cap should be positioned relative to that paragraph.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then this </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall not be considered a drop cap frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Note</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Although a drop cap is simply a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, this element is used to determine how the cap should be positioned relative to the following non-frame paragraph in relative terms (see possible values), rather than relying on absolute sizing. </span></span><span class="DefaultParagraphFont ">end note</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the following paragraph containing a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned as a drop cap:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:dropCap="margin" w:lines="3" w:hSpace="432" w:wrap="around" w:vAnchor="text" w:hAnchor="page" /&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;A&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">dropCap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies a value of </span></span><span class="DefaultParagraphFont ">margin</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, so this drop cap will be placed outside of the text margin before the </span></span><a href="start.html"><span class="Hyperlink DefaultParagraphFont ">start</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the current text. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_DropCap.html"><span class="Hyperlink DefaultParagraphFont ">ST_DropCap</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.24</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Frame Height)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies the frame's height.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This height is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The meaning of the value of the </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is defined based on the value of the </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> as follows:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">auto</span><span class="DefaultParagraphFont ">, then the frame's height should be automatically determined based on the height of its contents. This value is ignored.</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">atLeast</span><span class="DefaultParagraphFont ">, then the frame's height should be at least the value of this attribute.</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">exact</span><span class="DefaultParagraphFont ">, then the frame's height should be exactly the value of this attribute.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following paragraph containing a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hspace="187" w:wrap="around" w:vanchor="text" w:hanchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies a value of </span></span><span class="DefaultParagraphFont ">2189</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point, so this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  will be a minimum of </span></span><span class="DefaultParagraphFont ">2189</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point high regardless of its contents, since its </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value is set to </span></span><span class="DefaultParagraphFont ">atLeast</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">hAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Frame Horizontal Positioning Base)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the base </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from which the horizontal positioning in the </span></span><span class="DefaultParagraphFont ">x</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute should be calculated.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">A text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> may be horizontally positioned relative to:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The vertical edge of the page before any runs of text (the left edge for left-to-right paragraphs, the right edge for right-to-left paragraphs)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The vertical edge of the text margin before any runs of text (the left edge for left-to-right paragraphs, the right edge for right-to-left paragraphs)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The vertical edge of the text margin for the column in which the anchor paragraph is located  </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned one inch to the right of its column in a left-to-right document. This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:framePr … w:x="1440" w:hAnchor="column" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">These </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> properties specify that they are relative to the anchor paragraph's </span></span><span class="DefaultParagraphFont ">column</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and that relative to that column, the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> should be </span></span><span class="DefaultParagraphFont ">1440</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point in the direction of the flow of text (right, in this case). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_HAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_HAnchor</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.40</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Frame Height Type)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies the meaning of the height specified for this frame.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The meaning of the value of the </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is defined based on the value of the </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> as follows:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">auto</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, then the frame's height should be automatically determined based on the height of its contents. The </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value is ignored.</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">atLeast</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, then the frame's height should be at least the value the </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute.</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the value of </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is </span></span><span class="DefaultParagraphFont ">exact</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, then the frame's height should be exactly the value of the </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">auto</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following paragraph containing a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">h</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies a value of </span></span><span class="DefaultParagraphFont ">2189</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point, so this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  will be a minimum of </span></span><span class="DefaultParagraphFont ">2189</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point high regardless of its contents, since its </span></span><span class="DefaultParagraphFont ">hRule</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value is set to </span></span><span class="DefaultParagraphFont ">atLeast</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_HeightRule.html"><span class="Hyperlink DefaultParagraphFont ">ST_HeightRule</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.42</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">hSpace</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Horizontal Frame Padding)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and any non-frame text which has been allowed to flow around this </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> when the </span></span><span class="DefaultParagraphFont ">wrap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute on this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is set to </span></span><span class="DefaultParagraphFont ">around</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the </span></span><span class="DefaultParagraphFont ">wrap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value is not set to </span></span><span class="DefaultParagraphFont ">around</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, this value shall be ignored. If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any non-frame text on its left and right sides. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:framePr ...w:hSpace="720" w:wrap="around" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">wrap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> value of </span></span><span class="DefaultParagraphFont ">around</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> allows text to wrap around this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and the </span></span><span class="DefaultParagraphFont ">hSpace</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">lines</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Drop Cap Vertical Height in Lines)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the number of lines in the non-frame paragraph to which this text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is anchored which should be used to calculate the drop cap's height.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the current </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is not a drop cap (the parent </span></span><span class="DefaultParagraphFont ">framePr</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> element does not have the </span></span><span class="DefaultParagraphFont ">dropCap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute), this value is ignored. If the current text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is a dropped cap and this attribute is present, then any other vertical positioning information shall be ignored.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be considered to be </span></span><span class="DefaultParagraphFont ">1</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider the following paragraph containing a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned as a drop cap:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:dropCap="margin" w:lines="3" w:hSpace="432" w:wrap="around" w:vAnchor="text" w:hAnchor="page" W:y="400" w:yAlign="text" /&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;O&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&gt; </span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">  &lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Since this </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is being used as a dropped cap, the </span></span><span class="DefaultParagraphFont ">y</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and </span></span><span class="DefaultParagraphFont ">yAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attributes are ignored and the height of the drop cap is the first three lines of the anchor paragraph. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_DecimalNumber.html"><span class="Hyperlink DefaultParagraphFont ">ST_DecimalNumber</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.16</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">vAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Frame Vertical Positioning Base)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the base </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from which the horizontal positioning in the </span></span><span class="DefaultParagraphFont ">y</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute should be calculated.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">A text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> may be horizontally positioned relative to:</span></span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the page before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the text margin before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="ListBullet Normal DocDefaults ">•  <span class="DefaultParagraphFont ">The horizontal edge of the page before any runs of text (the top edge for top-to-bottom sections, the bottom for bottom-to-top sections)</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should be positioned two inches below the page top in a top-to-bottom document. This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:framePr … w:y="2880" w:vAnchor="page" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">These </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> properties specify that they are relative to the anchor </span></span><span class="DefaultParagraphFont ">page</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, and that relative to that column, the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> should be </span></span><span class="DefaultParagraphFont ">2880</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point in the direction of the flow of text (down, in this case). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_VAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_VAnchor</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.109</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">vSpace</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Vertical Frame Padding)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the minimum distance which shall be maintained </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the current text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> and any non-frame text which is above or below this text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This distance is expressed in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">: Consider a text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> which should have a minimum of a one-half inch </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> from any non-frame text on its top and bottom sides. This constraint would be specified using the following WordprocessingML:</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:framePr … w:vSpace="720" /&gt;</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The </span></span><span class="DefaultParagraphFont ">vspace</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute specifies that the </span></span><a href="spacing.html"><span class="Hyperlink DefaultParagraphFont ">spacing</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> </span></span><a href="between.html"><span class="Hyperlink DefaultParagraphFont ">between</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> text and this </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be a minimum of </span></span><span class="DefaultParagraphFont ">720</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Frame Width)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">Specifies the exact value for this text frame's width.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">This value is specified in twentieths of a point.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">When this attribute is present, the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> shall be rendered to the exact width specified. If this attribute is omitted, the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> width shall be automatically determined by the maximum line width of the content within the text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hspace="187" w:wrap="around" w:vanchor="text" w:hanchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that its width shall be exactly </span></span><span class="DefaultParagraphFont ">2419</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twips. If this attribute was removed, the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> would be rendered at the width of the content </span></span><span class="DefaultParagraphFont ">Text Frame Content</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.105</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">wrap</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Text Wrapping Around Frame)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies the </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of text wrapping which should be allowed around the contents of this text frame. This attribute determines if non-frame text shall be allowed to flow around the contents of this frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If this attribute is omitted, its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">around</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that when the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is rendered on the page, any non-text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> paragraphs which would normally flow onto the same lines shall be allowed to do so. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_Wrap.html"><span class="Hyperlink DefaultParagraphFont ">ST_Wrap</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.113</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">x</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Absolute Horizontal Position)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies an absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the text frame. This absolute </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the horizontal anchor specified by the </span></span><span class="DefaultParagraphFont ">hAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This value is expressed in twentieths of a point. If it is positive, then the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned after the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of horizontal text flow in this document. If it is negative, then the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned before the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of horizontal text flow in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the </span></span><span class="DefaultParagraphFont ">xAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is also specified, then this value is ignored. If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it should be located exactly </span></span><span class="DefaultParagraphFont ">1643</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point after the vertical edge of the page (from the </span></span><span class="DefaultParagraphFont ">hAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute). </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.88</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">xAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Relative Horizontal Position)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies a relative horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the text frame. This relative </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the horizontal anchor specified by the </span></span><span class="DefaultParagraphFont ">hAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If omitted, this attribute is not specified and the value of the </span></span><span class="DefaultParagraphFont ">x</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute determines the absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the text frame. If specified, the </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for this attribute supersede any value which is specified in the </span></span><span class="DefaultParagraphFont ">x</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute, and that value is ignored.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:xAlign="left" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it has a horizontal placement of exactly </span></span><span class="DefaultParagraphFont ">1643</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point relative to the page, but that exact placement is overridden by the presence of the </span></span><span class="DefaultParagraphFont ">xAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute to place the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> on the left side of the page. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_XAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_XAlign</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.114</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">y</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Absolute Vertical Position)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies an absolute vertical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the text frame. This absolute </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the vertical anchor specified by the </span></span><span class="DefaultParagraphFont ">vAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This value is expressed in twentieths of a point. If it is positive, then the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned after the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of vertical text flow in this document. If it is negative, then the text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is positioned before the anchor </span></span><a href="object.html"><span class="Hyperlink DefaultParagraphFont ">object</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the direction of vertical text flow in this document.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If the </span></span><span class="DefaultParagraphFont ">yAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute is also specified, then this value is ignored. If this attribute is omitted, then its value shall be assumed to be </span></span><span class="DefaultParagraphFont ">0</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="text" w:hAnchor="page" w:x="1643" w:y="73" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it should be located exactly </span></span><span class="DefaultParagraphFont ">79</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point below the top vertical edge of the anchor's paragraph's text (from the </span></span><span class="DefaultParagraphFont ">vAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute), assuming that the vertical text direction is top to bottom. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.88</span><span class="DefaultParagraphFont ">).</span></p></td></tr><tr><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">yAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (Relative Vertical Position)</span></span></p></td><td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;padding-bottom: 0.76mm;padding-left: 2.03mm;padding-right: 2.03mm;padding-top: 0.76mm;">
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Specifies a relative vertical </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for the text frame. This relative </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is specified relative to the vertical anchor specified by the </span></span><span class="DefaultParagraphFont ">vAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute for this text frame.</span></span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">If omitted, this attribute is not specified and the value of the </span></span><span class="DefaultParagraphFont ">y</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute determines the absolute horizontal </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of the text frame. If specified, the </span></span><a href="position.html"><span class="Hyperlink DefaultParagraphFont ">position</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> for this attribute supersedes any value which is specified in the </span></span><span class="DefaultParagraphFont ">y</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute, and that value is ignored, unless the </span></span><span class="DefaultParagraphFont ">vAnchor</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is set to </span></span><span class="DefaultParagraphFont ">text</span><span class="DefaultParagraphFont ">, in which case any relative positioning is not allowed, and is itself ignored.</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider the following WordprocessingML fragment specifying a text frame:</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:framePr w:</span></span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont ">="2419" w:h="2189" w:hRule="atLeast" w:hSpace="187" w:wrap="around" w:vAnchor="margin" w:hAnchor="page" w:x="1643" w:y="73" w:yAlign="center" /&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="pPr.html"><span class="Hyperlink DefaultParagraphFont ">pPr</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;Text Frame Content.&lt;/w:</span><a href="t.html"><span class="Hyperlink DefaultParagraphFont ">t</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  </span></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="r.html"><span class="Hyperlink DefaultParagraphFont ">r</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">This text </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> specifies that it has a vertical placement of exactly </span></span><span class="DefaultParagraphFont ">73</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> twentieths of a point relative to the top margin, but that exact placement is overridden by the presence of the </span></span><span class="DefaultParagraphFont ">yAlign</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> attribute to place the </span></span><a href="frame.html"><span class="Hyperlink DefaultParagraphFont ">frame</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> in the center of the margin. </span></span><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p>
+  
+  <p class="Normal DocDefaults "> </p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The possible values for this attribute are defined by the </span></span><a href="ST_YAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_YAlign</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> simple </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> (§</span></span><span class="DefaultParagraphFont ">2.18.115</span><span class="DefaultParagraphFont ">).</span></p></td></tr></tbody></table>
+  
+  <p class="KeepWithNext Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">The following </span></span><a href="XML.html"><span class="Hyperlink DefaultParagraphFont ">XML</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> Schema fragment defines the contents of this element:</span></span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;complexType </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="CT_FramePr"&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="dropCap" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_DropCap.html"><span class="Hyperlink DefaultParagraphFont ">ST_DropCap</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="lines" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_DecimalNumber.html"><span class="Hyperlink DefaultParagraphFont ">ST_DecimalNumber</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont ">="</span><a href="w.html"><span class="Hyperlink DefaultParagraphFont ">w</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="h" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="vSpace" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="hSpace" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_TwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_TwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="wrap" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_Wrap.html"><span class="Hyperlink DefaultParagraphFont ">ST_Wrap</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="hAnchor" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_HAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_HAnchor</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="vAnchor" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_VAnchor.html"><span class="Hyperlink DefaultParagraphFont ">ST_VAnchor</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="x" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="xAlign" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_XAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_XAlign</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="y" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_SignedTwipsMeasure.html"><span class="Hyperlink DefaultParagraphFont ">ST_SignedTwipsMeasure</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="yAlign" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_YAlign.html"><span class="Hyperlink DefaultParagraphFont ">ST_YAlign</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="hRule" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_HeightRule.html"><span class="Hyperlink DefaultParagraphFont ">ST_HeightRule</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.38in;text-indent: -0.38in;"><span class="DefaultParagraphFont ">   </span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">&lt;attribute </span></span><a href="name.html"><span class="Hyperlink DefaultParagraphFont ">name</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">="anchorLock" </span></span><a href="type.html"><span class="Hyperlink DefaultParagraphFont ">type</span></a><span class="DefaultParagraphFont ">="</span><a href="ST_OnOff.html"><span class="Hyperlink DefaultParagraphFont ">ST_OnOff</span></a><span class="DefaultParagraphFont ">" use="optional"/&gt;</span></p>
+  
+  <p class="SchemaFragmentLast SchemaFragment c Normal DocDefaults " style="position: relative; margin-left: 0.12in;text-indent: -0.12in;"><span class="DefaultParagraphFont ">&lt;/complexType&gt;</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>

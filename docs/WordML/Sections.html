@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><style><!--
+
+					/*paged media */ div.header {display: none }
+					div.footer {display: none } /*@media print { */
+					
+						div.header {display: block; position: running(header) }
+					
+
+					@page { size: A4; margin: 10%; @top-center {
+					content: element(header) } @bottom-center {
+					content: element(footer) } }
+
+
+					/*font definitions*/
+
+					/*element styles*/ .del
+					{text-decoration:line-through;color:red;}
+					
+						  .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+						
+
+
+					/* Word style definitions */
+					
+ /* TABLE STYLES */ 
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-bottom: 4mm;line-height: 115%;font-family: Calibri;font-size: 11.0pt;}
+.Normal {display:block;font-family: Calibri;}
+.Header {display:block;text-align: right;margin-bottom: 0in;line-height: 100%;}
+.c {display:block;position: relative; margin-left: 0.2in;font-family: Consolas;}
+.Heading2 {display:block;page-break-after: avoid;margin-top: 0.11in;margin-bottom: 1mm;font-weight: bold;color: #4F81BD;font-family: Cambria;font-size: 14.0pt;}
+
+ /* CHARACTER STYLES */ .DefaultParagraphFont {display:inline;}
+.Hyperlink {display:inline;color: #5F5F5F;text-decoration: underline;}
+
+
+					/* TABLE CELL STYLES */
+					--></style><script type="text/javascript">
+				
+				function toggleDiv(divid){
+					if(document.getElementById(divid).style.display == 'none'){
+						document.getElementById(divid).style.display = 'block';
+					}else{
+						document.getElementById(divid).style.display = 'none';
+					}
+				}
+								
+			</script></head><body>
+  
+  <p><a href="index.html" style="font-size:small">[Table of Contents]</a> <a href="Sections.docx" style="font-size:small">[docx version]</a>
+  
+  <div class="header">
+  
+  <p class="Header Normal DocDefaults "><span class="DefaultParagraphFont ">WordprocessingML Reference Material</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> - </span></span><span class="DefaultParagraphFont ">Table</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of Contents</span></span></p></div>
+  
+  <div class="document">
+  
+  <p class="Heading2 Normal DocDefaults "> <a name="_Toc147895860_1" /><a name="_Toc147905011_1" /><a name="TOCSection18_1" /><span class="DefaultParagraphFont ">Sections</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">WordprocessingML does not natively store the concept of pages, since it is based on paragraphs and runs (which are laid out on to pages by consumers of this content). However, although there is no concept of storing pages in the WordprocessingML </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">, it is often necessary to store information about a page or </span></span><a href="group.html"><span class="Hyperlink DefaultParagraphFont ">group</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> of pages in a document, in order to store information that is to be used to </span></span><a href="format.html"><span class="Hyperlink DefaultParagraphFont ">format</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> the pages on which a set of paragraphs will appear. In WordprocessingML, this information is stored via the use of </span></span><span class="DefaultParagraphFont ">sections</span><span class="DefaultParagraphFont ">.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">In WordprocessingML,</span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> sections</span></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> are groupings of paragraphs that have a specific set of properties used to define the pages on which the text will appear, as well as other section-level (applying to all paragraphs' appearance) properties.</span></span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">[</span><span class="DefaultParagraphFont ">Example</span><span class="DefaultParagraphFont ">: Consider a document with four paragraphs of text that is to be printed on a page in landscape mode, followed by ten paragraphs of text that are to be printed in portrait mode. This requirement implies information about the page(s) used to lay out each grouping of text—the first four paragraphs could require one page, or ten.</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">Therefore, rather than try to cache knowledge of the number of pages and their properties (which is likely to become invalid if the </span></span><a href="XML.html"><span class="Hyperlink DefaultParagraphFont ">XML</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> is manipulated by a producer that does not understand page layout), this information is stored by breaking the document into two sections, as follows:</span></span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="sectPr.html"><span class="Hyperlink DefaultParagraphFont ">sectPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    (section one properties go here)</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="pgSz.html"><span class="Hyperlink DefaultParagraphFont ">pgSz</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> ... w:orient="landscape" /&gt;</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    …    </span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="sectPr.html"><span class="Hyperlink DefaultParagraphFont ">sectPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">…</span></p>
+  
+  <p class="c Normal DocDefaults "><span class="DefaultParagraphFont ">&lt;w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;w:</span></span><a href="sectPr.html"><span class="Hyperlink DefaultParagraphFont ">sectPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    (section two properties go here)</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    &lt;w:</span></span><a href="pgSz.html"><span class="Hyperlink DefaultParagraphFont ">pgSz</span></a><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;"> ... w:orient="landscape" /&gt;</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">    …    </span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  &lt;/w:</span></span><a href="sectPr.html"><span class="Hyperlink DefaultParagraphFont ">sectPr</span></a><span class="DefaultParagraphFont ">&gt;</span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont "><span style="white-space:pre-wrap;">  …</span></span><span class="DefaultParagraphFont "><br clear="all" /></span><span class="DefaultParagraphFont ">&lt;/w:</span><a href="p.html"><span class="Hyperlink DefaultParagraphFont ">p</span></a><span class="DefaultParagraphFont ">&gt;</span></p>
+  
+  <p class="Normal DocDefaults "><span class="DefaultParagraphFont ">end example</span><span class="DefaultParagraphFont ">]</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-296711-7', 'auto' , {  'allowLinker': true}); ga('send', 'pageview');</script>
+  
+  </body></html>
