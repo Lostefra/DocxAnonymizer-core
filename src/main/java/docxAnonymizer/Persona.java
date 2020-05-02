@@ -85,15 +85,15 @@ public class Persona {
 		this.cognome = COGNOME;
 		this.nomi = new ArrayList<>();
 		this.nomi.add(nome.charAt(0) + "((?i)" + nome.substring(1, nome.length()) + ')');
-		// secondo nome opzionale
-		this.nomi.add("(" + SEP_base + "*" + NOME + SEP_base + "*" + ")?");
+		// secondo nome opzionale, in due versioni a seconda se compare prima o dopo del nome del dizionario
+		this.nomi.add("(" + SEP_regex + NOME + ")?");
+		this.nomi.add("(" + NOME + SEP_regex + ")?");
 		// aggiungo una lettera per distinguere le persone omonime 
 		this.id = "ID@" + String.valueOf(id);
 		this.comboIndexDuplicati = new ArrayList<>();
 		this.comboIndex = new ArrayList<>();
+		this.hasOmonimi = false;
 		this.automatic = true;
-		// imposto la regex strict: il nome del dizionario deve necessariamente comparire
-		this.hasOmonimi = true;
 		calcolaRegex();	
 	}
 
@@ -133,7 +133,9 @@ public class Persona {
     }
 	
 	/*
-	 * if not hasOmonimi:
+	 * if automatic:
+	 *     DEFAULT VALUES FOR DICTIONARY
+	 * elif not hasOmonimi:
 	 *     INPUT [0,1] ; OUPUT [0, 1, 10, 01]
 	 *     INPUT [0,1,2] ; OUPUT [0, 1, 2, 10, 01, 21, 20, 12, 02, 012, 021, 120, 102, 210, 201]
 	 * else:
@@ -144,6 +146,14 @@ public class Persona {
 		StringBuilder s = new StringBuilder();
 		this.comboIndexDuplicati = new ArrayList<>();
 		this.comboIndex = new ArrayList<>();
+		
+		// indici noti per i nomi delle persone individuate dal dizionario
+		if(this.automatic) {
+			comboIndex.add("01");
+			comboIndex.add("20");
+			return;
+		}
+				
 		
 		for(int i = 0; i < nomi.size(); i++) {
 			s.append(i);
@@ -326,7 +336,8 @@ public class Persona {
 				if(App.debug) {
 			        System.out.print("       Start index: " + matcher.start());
 			        System.out.print(", End index: " + matcher.end()); //lunghezza parola, ossia primo indice libero
-			        System.out.println(", Found: " + matcher.group());
+			        System.out.println(", Found: " + matcher.group() + " (first name: \"" + this.nomi.get(0).charAt(0)
+							+ this.nomi.get(0).substring(6, this.nomi.get(0).length() - 1) + ")\"");
 				}
 				charToRemove = matcher.end() - matcher.start();
 				charToAdd = String.valueOf(idCheck).length();
