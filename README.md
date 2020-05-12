@@ -1,4 +1,4 @@
-# DocxAnonymizer
+# DocxAnonymizer-base
 Stand-alone Java tool to anonymize OOXML Documents (docx). This software helps to make docx documents compliant to [General Data Protection Regulation 2016/679 (**GDPR**)](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ITA&toc=OJ:L:2016:119:TOC).
 
 The suffix *base* helps to distinguish it from [DocxAnonymizer](https://github.com/Lostefra/DocxAnonymizer). Both software perform same tasks, but [DocxAnonymizer-base](https://github.com/Lostefra/DocxAnonymizer-base) can work only on a single machine, whereas [DocxAnonymizer](https://github.com/Lostefra/DocxAnonymizer) can work either locally or on a cluster with Apache Spark.
