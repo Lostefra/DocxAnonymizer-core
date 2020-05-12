@@ -9,7 +9,7 @@ Given a **complex** and **rich-formatted docx** file, the program extrapolates a
 
 **Nominatives** (i.e. sequences of names and surnames) are **replaced** with anonymous **IDs** and multiple occurrences of the same nominatives are replaced with the same ID. 
 
-The **detection** of the nominatives can be **either on demand or automatic**. In fact, the user can express as input the sequences of names-surname to anonymize; in case these sequences are not given, the program automatically starts searching for nominatives in the document using dictionaries of Italian and English names. A pattern-based approach is adopted to detect nominatives. [Here my thesis for further details](https://github.com/Lostefra/DocxAnonymizer-base/blob/master/docs/TESI_Lorenzo_Mario_Amorosa.pdf).
+The **detection** of the nominatives can be **either on demand or automatic**. In fact, the user can express as input the sequences of names-surname to anonymize; in case these sequences are not given, the program automatically starts searching for nominatives in the document using dictionaries of Italian and English names. A pattern-based approach is adopted to detect nominatives. [Here is my thesis for further details](https://github.com/Lostefra/DocxAnonymizer-base/blob/master/docs/TESI_Lorenzo_Mario_Amorosa.pdf).
 
 In brief, the [program](https://github.com/Lostefra/DocxAnonymizer-base/blob/4b7a2aa461b80a935c0066c71dd222028a9348b1/src/main/java/docxAnonymizer/App.java#L76) accepts the following options:
 ```sh
