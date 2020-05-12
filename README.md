@@ -1,25 +1,30 @@
 # DocxAnonymizer
-Stand-alone Java tool to anonymize OOXML Documents (DOCX)
+Stand-alone Java tool to anonymize OOXML Documents (DOCX). This sotware implements [TODO GDPR]
 
+[TODO spiegare nome base -> new project to increase performance, based on Apache Spark with same functionalities]
 
-Possibili sviluppi progetto Scala: Docx Anonymizer.
+Given a **complex** and **rich-formatted DOCX** file, the program extrapolates all the text, it **anonymizes** its content and then it saves the new DOCX **without altering its structure**.
 
- - Cruciale: architettura distribuita per il processamento dei documenti -
+**Nominatives** (i.e. sequences of names and surnames) are **replaced** with anonymous **IDs** and multiple occurrences of the same nominatives are replaced with the same ID. 
 
-1) Dati N server, M nomi del dizionario: si da' a ogni server la responsabilita di processare solo M/N nomi del dizionario. [HARD]
-   - Variante correlata: se N >> 1, si puo' fare load balancing nella distribuzioni di documenti/ porzioni di un singolo documento [HARD]
-2) Implementare i dizionari con database (non file) in uno scenario di processamento distribuito dei dati: 
-   - tenere conto del numero di occorrenze dei nomi nei documenti per ottimizzazione: saranno processati prima i nodi piu' frequenti [MEDIUM]
-   - ampliamento dinamico del dizionario con nuovi nomi mediante uno schema a "candidatura" [MEDIUM]
-3) Ampliare il parco di dati personali da minimizzare (date e luoghi di nascita, codici fiscali, indirizzi, email, numeri di telefono, sesso, dati documenti di identita', etc.). Nota: non tutte le date e non tutte le citta vanno minimizzate [EASY]
+The **detection** of the nominatives can be **either on demand or automatic**. In fact, the user can express as input the sequences of names-surname to anonymize; in case these sequences are not given, the program automatically starts searching for nominatives in the document using dictionaries of Italian and English names. A pattern-based approach is adopted to detect nominatives.
 
- - Da decidere: refactor in scala di quali parti del codice? -
+In brief, the [program](https://github.com/Lostefra/DocxAnonymizer-base/blob/4b7a2aa461b80a935c0066c71dd222028a9348b1/src/main/java/docxAnonymizer/App.java#L76) accepts the following options ([here my thesis for further details](https://github.com/Lostefra/DocxAnonymizer-base/blob/master/docs/TESI_Lorenzo_Mario_Amorosa.pdf)):
+[TODO]
+-i <inputFile>   [Obbligatorio, file Docx del quale si vogliono minimizzare i dati contenuti]
+-o <outputFile>  [Facoltativo, file Docx prodotto da Docx Anonymizer; se non espresso impostato a default]
+-m <minimize>    [Facoltativo, file contenente riga per riga i nominativi da minimizzare, nella forma: "<nome1>:<nome2>:[...]:<nomeN>;<cognome>"]
+                 [  Nota bene: qualora il file fosse assente Docx Anonymizer impieghera' i dizionari nella ricerca dei nominativi               ]
+-kn <keepNames>  [Facoltativo, file contenente riga per riga i nominativi da NON minimizzare, nella forma di cui sopra]
+-ke <keepExpr>   [Facoltativo, file contenente riga per riga delle espressioni da NON minimizzare (non nominativi)]
+                 [  Nota bene: alcune espressioni sono gia' impostate a default in config/keep_unchanged.txt      ]
+-d <debug>       [Facoltativo, se tale opzione e' impostata sono stampate a video informazioni sull'esecuzione]
 
-N SERVER:
-- 1 documento => suddiviso in N parti;
+In alternativa, i nominativi da minimizzare possono essere forniti direttamente da linea di comando nello stesso formato indicato precedentemente
+Cio' e' possibile anche per i nominativi da NON minimizzare, andra' in tal caso anteposto al primo nome un punto esclamativo '!'
 
-== Ipotesi 1 ==
-- Ogni server ha i suoi nomi; processa e minimizza una parte di documento; scambia la propria parte con un altro server che non ha ancora processato quella porzione di documento
+ */
 
-== Ipotesi 2 ==
-- Tutti i nominativi vengono individuati in un primo momento dai server, successivamente in parallelo gli N server minimizzano tenendo conto di tutti nominativi individuati
+[accennare a docx4j, license]
+
+This project was the case study of my bachelor's thesis.
