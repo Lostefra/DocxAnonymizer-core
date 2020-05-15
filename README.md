@@ -5,7 +5,7 @@ The suffix *base* helps to distinguish it from [DocxAnonymizer](https://github.c
 
 ## Workflow
 
-Given a **complex** and **rich-formatted docx** file, the program extrapolates all the text, it **anonymizes** its content and then it saves the new docx **without altering its structure**.
+Given a **complex** and **rich-formatted docx** file, the program extrapolates all the text, it **anonymizes** its content and then it saves a new docx **without altering its original structure and layout**.
 
 **Nominatives** (i.e. sequences of names and surnames) are **replaced** with anonymous **IDs** and multiple occurrences of the same nominatives are replaced with the same ID. 
 
