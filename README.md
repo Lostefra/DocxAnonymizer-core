@@ -25,6 +25,6 @@ In brief, the [program](https://github.com/Lostefra/DocxAnonymizer-base/blob/4b7
 
 In this repository you can also find an useful [bash script](https://github.com/Lostefra/DocxAnonymizer-base/tree/master/tools) to view and modify XML parts of a docx file and a [summary of docx standard ECMA-376 documentation](https://github.com/Lostefra/DocxAnonymizer-base/blob/master/docs/WordML) easy to navigate in a web browser after you have downloaded it (its [index.html](https://github.com/Lostefra/DocxAnonymizer-base/blob/master/docs/WordML/index.html)). 
 
-DocxAnonymizer leverage on the [docx4j](https://www.docx4java.org/trac/docx4j) library.
+DocxAnonymizer leverage the [docx4j](https://www.docx4java.org/trac/docx4j) library.
 
 This project was the case study of my bachelor's thesis.
