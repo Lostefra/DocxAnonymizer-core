@@ -24,15 +24,18 @@ import java.util.regex.Pattern;
  *  
  */
 public class Persona {
-	private String cognome, id, regex;
+	private String cognome;
+	private String id;
+	private String regex;
 	private List<String> nomi, comboIndexDuplicati, comboIndex;
 	private boolean automatic, hasOmonimi;
+	private String nameSurnameAssociationsValue;
 	
 	// regex formulate secondo le linee guida discusse nella tesi
 	private final static String SEP_base = "\\s";
 	private final static String SEP_regex = SEP_base + "+";
-	private final static String EXTRA = "ĿŀČčŘřŠšŽžĲĳŒœŸŐőŰűḂḃĊċḊḋḞḟĠġṀṁṠṡṪṫĀāĒēĪīŌōŪūİıĞğŞşẀẁẂẃŴŵŶŷǾǿẞ";
-	private final static String BASE = "[A-Z][a-zA-ZÀ-ÖØ-öø-ÿ" + EXTRA + "]";
+	private final static String EXTRA = "ĿŀČčŘřŠšŽžĲĳŒœŸŐőŰűḂḃĆĊċḊḋḞḟĠġṀṁṠṡṪṫĀāĒēĪīŌōŪūİıĞğŞşẀẁẂẃŴŵŶŷǾǿẞ";
+	private final static String BASE = "[A-Z]['‘’′´`a-zA-ZÀ-ÖØ-öø-ÿ" + EXTRA + "]";
 	private final static String NOME = BASE + "+";
 	private final static String PREP = "((?i)d((a|e)(l(l[aeo]?)?|i|gli?)?|i)?|(ne|a|su)(l(l[aeo]?)?|i|gli)?|l[aeo]?|co[iln]?|i[ln]?|gli|per)";
 	private final static String COGNOME = "((" + BASE + "*|" + PREP + ")['‘’′´`" + SEP_base + "]+)?" + NOME;
@@ -52,6 +55,12 @@ public class Persona {
 	 */
 	public Persona(String cognome, List<String> nomi, int id) {
 		super();
+		// costruisco stringa da inserire nella mappa di associazione id-cognome nome
+		this.nameSurnameAssociationsValue = cognome.toUpperCase() + " ";
+		for (String nome : nomi){
+			this.nameSurnameAssociationsValue += nome.toUpperCase() + " ";
+		}
+
 		// imposto regex robusta rispetto agli apostrofi
 		cognome = cognome.replaceAll("['‘’′´`]", "['‘’′´`] ?");
 		// Es: A((?i)morosa)
@@ -64,10 +73,7 @@ public class Persona {
 		for(String nome : nomi) {
 			this.nomi.add(nome.charAt(0) + "((?i)" + nome.substring(1, nome.length()) + ')');
 		}
-		if(id > 0)
-			this.id = "ID" + String.valueOf(id);
-		else
-			this.id = "KeepUnchanged";
+		this.id = String.valueOf(id);
 		this.comboIndexDuplicati = new ArrayList<>();
 		this.comboIndex = new ArrayList<>();
 		this.automatic = false;
@@ -101,14 +107,29 @@ public class Persona {
 	public String toString() {
 		return "Persona [cognome=" + cognome + ", nomi=" + nomi + ", id=" + id + "]";
 	}
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getNameSurnameAssociationsValue() { return nameSurnameAssociationsValue; }
+
 	/**
-	 * Funzione che decreta se una stringa di testo deve essere sottoposta alla minimizzazione dei dati o meno
+	 * Funzione che decreta le sotto-stringhe di testo che devono essere sottoposta alla minimizzazione dei dati
 	 * @param textValue stringa di testo contenuta in nodi Docx
-	 * @return true: la stringa contiene "verosimilmente" dei nominativi; false: la stringa non contiene nominativi
+	 * @return List<EntryPoint> che contengono "verosimilmente" dei nominativi; se lista vuota allora nessun match
 	 */
-	public static boolean preprocess(String textValue) {
-		return Pattern.compile(PREPROCESS).matcher(textValue).find();
+	public static List<EntryPoint> preprocess(String textValue, int index) {
+		List<EntryPoint> eps = new ArrayList<>();
+		Matcher matcher = Pattern.compile(PREPROCESS).matcher(textValue);
+		while(matcher.find()) {
+			eps.add(new EntryPoint(null, index, matcher.start(), matcher.end()));
+		}
+		return eps;
 	}
 	
 	private boolean hasCharsDuplicated(String s) {
@@ -251,7 +272,7 @@ public class Persona {
 	}
 	
 	public void setHasOmonimi(boolean value) {
-		if(value) {
+		if(value && !this.hasOmonimi) {
 			this.hasOmonimi = true;
 			calcolaRegex();
 		}
@@ -281,16 +302,20 @@ public class Persona {
 		}
 	}
 	
-	private static String getAsUniqueFlatString(List<String> terminiNominativo) {
+	public static String getAsUniqueFlatString(List<String> terminiNominativo) {
 		String nominativo = "";
 		// ordino alfabeticamente i termini del nominativo
 		Collections.sort(terminiNominativo);
 		for(String termine : terminiNominativo)
 			nominativo += termine;
 		// mantengo solo i caratteri alfabetici	
-		return nominativo.replaceAll("[^a-zA-ZÀ-ÖØ-öø-ÿ" + EXTRA + "]", "");
+		return nominativo.replaceAll("[^a-zA-ZÀ-ÖØ-öø-ÿ" + EXTRA + "]", "").toUpperCase();
 	}
-	
+
+	public boolean match(String test){
+		return Pattern.compile(regex).matcher(test).find();
+	}
+
 	/**
 	 * La funzione minimizza i dati presenti in in una stringa di testo contenuta in uno o piu' nodi Docx
 	 * Nel caso siano impiegati i dizionari di nomi nella minimizzazione, sono asseganti id distinti per 
@@ -309,17 +334,16 @@ public class Persona {
 	 * @param entryPoints riferimenti ai nodi Docx che contengono porzioni della stringa da minimizzare
 	 * @return stringa post minimizzazione
 	 */
-	public String minimizza(String textValue, List<EntryPoint> entryPoints, List<EntryPoint> unchangeable) {
+	public String minimizza(String textValue, List<EntryPoint> entryPoints) {
 		Matcher matcher;
 		boolean continua;
-		int charToRemove, charRemoved = 0, currentRemove, charToAdd, gap;
-		EntryPoint nodoTrovato;
-		String nominativo, idCheck = this.id; 
+		String nominativo, idCheck = this.id;
+		int charToRemove, charToAdd;
 		
 		do {
 			continua = false;
 			matcher = Pattern.compile(regex).matcher(textValue);
-			if(matcher.find() && canChange(matcher, unchangeable)) {
+			if(matcher.find()) {
 				continua = true;			
 				if(automatic) {
 					// ottengono una rappresentazione univoca in stringa del nominativo				
@@ -348,68 +372,69 @@ public class Persona {
 						System.out.print("       Aggiunti " + charToRemove + " caratteri");
 					System.out.println(". Assegnato l'ID: " + idCheck);
 				}
-				nodoTrovato = null;
 
-				//cerco il nodo contenente il nominativo che sto per minimizzare
-				for(EntryPoint e : entryPoints) {			
-					//per il nodo contenente il nome da minimizzare reimposto gli indici
-					if(matcher.start() >= e.getFrom() && matcher.start() < e.getTo() && nodoTrovato == null) {
-						nodoTrovato = e;
-						//calcolo i caratteri compresi tra l'inizio del match e la fine del nodo
-						gap = e.getTo() - matcher.start();
-						//il nodo contiene tutta la parola
-						if(charToRemove <= gap) {
-							charRemoved = charToRemove;
-							charToRemove = 0;
-							e.setTo(e.getTo() - charRemoved + charToAdd);
-						}
-						//la parola e' presente anche nei nodi successivi
-						else {
-							charRemoved = gap;
-							charToRemove -= charRemoved;
-							e.setTo(e.getTo() - charRemoved + charToAdd);
-						}
-					}
-					//per tutti i nodi successivi a quello contenente il nome da minimizzare traslo gli indici
-					if(nodoTrovato != null && e != nodoTrovato) {
-						//traslo indietro gli indici, di un valore pari ai caratteri rimossi
-						e.setFrom(e.getFrom() - charRemoved + charToAdd);
-						e.setTo(e.getTo() - charRemoved + charToAdd);
-						//verifico se rimuovere altri caratteri
-						if(charToRemove != 0) {
-							//calcolo il numero di caratteri contenuti in un nodo
-							gap = e.getTo() - e.getFrom();
-							//il nodo contiene tutta la parola
-							if(charToRemove <= gap) {
-								currentRemove = charToRemove;
-								charRemoved += charToRemove;
-								charToRemove = 0;
-								e.setTo(e.getTo() - currentRemove);
-							}
-							//la parola e' presente anche nei nodi successivi
-							else {
-								currentRemove = gap;
-								charRemoved += gap;
-								charToRemove -= currentRemove;
-								e.setTo(e.getTo() - currentRemove);
-							}
-						}
-					}
-				}
-				if(nodoTrovato == null) {
-					System.out.println("ASSURDO: matcher.find() ha trovato un match, ma nessun EntryPoint lo contiene");
-				}
+				updateDocxEntrypoints(entryPoints, matcher.start(), charToRemove, charToAdd);
+
 				// rimuovo un'occorrenza del nominativo alla volta per una gestione corretta degli entryPoints
-				String old = textValue;
-				textValue = matcher.replaceFirst(String.valueOf(idCheck));			
-				// aggiorno boundaries dei nodi contenente testo da non modificare
-				propagateChanges(textValue, old, unchangeable);				
+				textValue = matcher.replaceFirst(String.valueOf(idCheck));
 			}
 		} while(continua);
 		
 		return textValue;
 	}
-	
+
+	public static void updateDocxEntrypoints(List<EntryPoint> entryPoints, int from, int charToRemove, int charToAdd) {
+		int charRemoved = 0, currentRemove, gap;
+		EntryPoint nodoTrovato = null;
+
+		//cerco il nodo contenente il nominativo che sto per minimizzare
+		for(EntryPoint e : entryPoints) {
+			//per il nodo contenente il nome da minimizzare reimposto gli indici
+			if(from >= e.getFrom() && from < e.getTo() && nodoTrovato == null) {
+				nodoTrovato = e;
+				//calcolo i caratteri compresi tra l'inizio del match e la fine del nodo
+				gap = e.getTo() - from;
+				//il nodo contiene tutta la parola
+				if(charToRemove <= gap) {
+					charRemoved = charToRemove;
+					charToRemove = 0;
+					e.setTo(e.getTo() - charRemoved + charToAdd);
+				}
+				//la parola e' presente anche nei nodi successivi
+				else {
+					charRemoved = gap;
+					charToRemove -= charRemoved;
+					e.setTo(e.getTo() - charRemoved + charToAdd);
+				}
+			}
+			//per tutti i nodi successivi a quello contenente il nome da minimizzare traslo gli indici
+			if(nodoTrovato != null && e != nodoTrovato) {
+				//traslo indietro gli indici, di un valore pari ai caratteri rimossi
+				e.setFrom(e.getFrom() - charRemoved + charToAdd);
+				e.setTo(e.getTo() - charRemoved + charToAdd);
+				//verifico se rimuovere altri caratteri
+				if(charToRemove != 0) {
+					//calcolo il numero di caratteri contenuti in un nodo
+					gap = e.getTo() - e.getFrom();
+					//il nodo contiene tutta la parola
+					if(charToRemove <= gap) {
+						currentRemove = charToRemove;
+						charRemoved += charToRemove;
+						charToRemove = 0;
+						e.setTo(e.getTo() - currentRemove);
+					}
+					//la parola e' presente anche nei nodi successivi
+					else {
+						currentRemove = gap;
+						charRemoved += gap;
+						charToRemove -= currentRemove;
+						e.setTo(e.getTo() - currentRemove);
+					}
+				}
+			}
+		}
+	}
+
 	/**
 	 * 
 	 * Funzione che verifica che il nodo da minimizzare non rientri tra quelli da lasciare invariati
@@ -438,9 +463,9 @@ public class Persona {
 	 * 
 	 * @param tmp la stringa post-sostituzione
 	 * @param old la stringa pre-sostituzione
-	 * @param unchangeable lista di EntryPoint da aggiornare
+	 * @param eps lista di EntryPoint da aggiornare
 	 */
-	private void propagateChanges(String tmp, String old, List<EntryPoint> unchangeable) {
+	public static void propagateChanges(String tmp, String old, List<EntryPoint> eps) {
 		int diff = tmp.length() - old.length();
 		int disparityIndex = 0, upperBound = diff > 0 ? old.length() : tmp.length();
 		// la stringa e' nuova solo da un certo indice in poi
@@ -450,7 +475,7 @@ public class Persona {
 			disparityIndex += 1;
 		}
 		// aggiorno i boundaries solo se nella zona di aggiornamento della stringa
-		for(EntryPoint e : unchangeable) {
+		for(EntryPoint e : eps) {
 			if(e.getFrom() >= disparityIndex) {
 				e.setFrom(e.getFrom() + diff);
 				e.setTo(e.getTo() + diff);

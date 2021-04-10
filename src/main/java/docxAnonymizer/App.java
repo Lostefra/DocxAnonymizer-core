@@ -64,6 +64,7 @@ public class App {
 	public static final boolean log4jPrints = false;
 	private static String inputFile;
 	private static String outputFile;
+	private static String outputFileAssociations;
 	private static String minimizeFile;
 	private static String keepUnchangedNamesFile;
 	private static String keepUnchangedExprFile;
@@ -149,6 +150,7 @@ public class App {
 	            System.out.println(commandLine.getOptionValue("o", defaultOutput));
             }
             outputFile = commandLine.getOptionValue("o", defaultOutput);
+			outputFileAssociations = outputFile.replaceAll("\\.docx$", "-associations\\.txt");
             
             keepUnchangedExprFile = commandLine.getOptionValue("ke");
             
@@ -217,20 +219,19 @@ public class App {
             
             String cognome, nomiString;
         	List<String> nomi;
-        	int id = 1;
+        	int id = 0;
             for (String argument : nominativi) {
                 if(argument.matches(Persona.NOMINATIVO_USER)) {
             		nomiString = argument.split(Pattern.quote(";"))[0];
             		cognome = argument.split(Pattern.quote(";"))[1];
-            		nomi = List.of(nomiString.split(Pattern.quote(":")));  
+            		nomi = Arrays.asList(nomiString.split(Pattern.quote(":")));
             		if(nomi.size() > 10) {
                     	System.out.println("WARNING: sono inseribili un massimo di 10 nomi per persona, non minimizzo i dati" +
                     	" della persona con cognome: " + cognome + ". Procedo con l'elaborazione.");
                     	break;
             		}         	
                 	//aggiungo la persona alla lista
-                	persone.add(new Persona(cognome, nomi, id)); 
-                	id += 1;
+                	persone.add(new Persona(cognome, nomi, id));
                 }
                 else {
                 	ParseException pe = new ParseException(argument + ": input non ben formato");
@@ -280,7 +281,7 @@ public class App {
                 if(argument.matches(Persona.NOMINATIVO_USER)) {
             		nomiString = argument.split(Pattern.quote(";"))[0].replaceAll("!", "");
             		cognome = argument.split(Pattern.quote(";"))[1];
-            		nomi = List.of(nomiString.split(Pattern.quote(":")));  
+            		nomi = Arrays.asList(nomiString.split(Pattern.quote(":")));
             		if(nomi.size() > 10) {
                     	System.out.println("WARNING: sono inseribili un massimo di 10 nomi per persona, non minimizzo i dati" +
                     	" della persona con cognome: " + cognome + ". Procedo con l'elaborazione.");
@@ -386,9 +387,9 @@ public class App {
 		//elaboro i nodi contenuti in document.xml e minimizzo i dati personali contenuti
 		Elaborator elab = null;
 		if (keepUnchangedExprFile != null)
-			elab = new Elaborator(runNodes, persone, keepUnchanged, keepUnchangedExprFile);
+			elab = new Elaborator(runNodes, outputFileAssociations, persone, keepUnchanged, keepUnchangedExprFile);
 		else
-			elab = new Elaborator(runNodes, persone, keepUnchanged);
+			elab = new Elaborator(runNodes, outputFileAssociations, persone, keepUnchanged);
 		elab.work();
  	
     	//salvataggio nuovo file docx modificato

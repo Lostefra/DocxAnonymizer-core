@@ -1,15 +1,12 @@
 package docxAnonymizer;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import javax.swing.*;
 import javax.xml.bind.JAXBElement;
 
 import org.docx4j.wml.Br;
@@ -91,37 +88,52 @@ public class Elaborator {
 	private List<Persona> persone, keepUnchanged;
 	private PlainTexts plainTexts;
 	private HashMap<Integer, Boolean> runNodesElaborated;
+	private FileWriter outputFileAssociations;
+	private HashMap<String, String> associationsMap;
 	private final String SEP_docx = "\t";
 	private String toKeepViaConfig;
+	private boolean automatic = false;
+	private HashSet<String> dictionary;
+	public UtilsID utilsID;
 	
-	public Elaborator(List<Object> runNodes, List<Persona> persone, List<Persona> keepUnchanged) {
+	public Elaborator(List<Object> runNodes, String outputFileAssociations, List<Persona> persone, List<Persona> keepUnchanged) {
 		this.runNodes = new ArrayList<>();
 		this.plainTexts = new PlainTexts();
-		this.runNodesElaborated = new HashMap<Integer, Boolean>();
-		
+		this.runNodesElaborated = new HashMap<>();
+		this.dictionary = new HashSet<>();
+		this.utilsID = new UtilsID();
+		this.associationsMap = new HashMap<>();
+		try {
+			this.outputFileAssociations = new FileWriter(outputFileAssociations);
+		} catch(IOException e) {
+			System.out.println("Eccezione durante la creazione del file di associazioni: " + outputFileAssociations);
+			e.printStackTrace();
+			System.exit(5);
+		}
+
 		R tmpRun;
 		for (Object node : runNodes) {
 			if (! (node instanceof R))
 				throw new IllegalArgumentException("la lista 'runNodes' deve contenere solo nodi di tipo 'R', non " + lastName(node.getClass().getName()));
 			tmpRun = (R) node;
 			this.runNodes.add(tmpRun);
-			this.runNodesElaborated.put(tmpRun.hashCode(), Boolean.valueOf(false));
+			this.runNodesElaborated.put(tmpRun.hashCode(), Boolean.FALSE);
 		}
 		this.persone = persone;
 		this.keepUnchanged = keepUnchanged;
 		
 		if(!persone.isEmpty())
 			Persona.updateOmonimi(persone);
-		
-		readConfig("config" + File.separator + "keep_unchanged.txt");
+
+		readConfig( "/" + "config" + "/" + "keep_unchanged.txt", true);
 		initializePlainTexts(this.runNodes);
 		
 	}
 	
-	public Elaborator(List<Object> runNodes, List<Persona> persone, List<Persona> keepUnchanged,
+	public Elaborator(List<Object> runNodes, String outputFileAssociations, List<Persona> persone, List<Persona> keepUnchanged,
 			String keepUnchangedExprFile) {
-		this(runNodes, persone, keepUnchanged);
-		readConfig(keepUnchangedExprFile);
+		this(runNodes, outputFileAssociations, persone, keepUnchanged);
+		readConfig(keepUnchangedExprFile.replace("\\", "/"), false);
 	}
 
 	private static String fixedLengthString(String string, int length) {
@@ -149,18 +161,22 @@ public class Elaborator {
 	 * 
 	 * @param f_name filename contenente espressioni critiche da non minimizzare nel documento
 	 */
-	private void readConfig(String f_name) {
+	private void readConfig(String f_name, boolean fromResources) {
 		StringBuilder sb = null;
 		String toKeep;
+		BufferedReader bf;
 		try {
-			BufferedReader bf = new BufferedReader(new FileReader(f_name));
+			if(fromResources)
+				bf = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(f_name)));
+			else
+				bf = new BufferedReader(new FileReader(f_name));
 			toKeep = bf.readLine();
 			if(toKeep != null)
-				sb = new StringBuilder(Pattern.quote(toKeep.trim()) + "|" + Pattern.quote(toKeep.trim().toUpperCase()));
+				sb = new StringBuilder(toKeep.trim() + "|" + toKeep.trim().toUpperCase());
 			while(toKeep != null) {
 				toKeep = bf.readLine();
 				if(toKeep != null)
-					sb.append("|" + Pattern.quote(toKeep.trim()) + "|" + Pattern.quote(toKeep.trim().toUpperCase()));
+					sb.append("|" + toKeep.trim() + "|" + toKeep.trim().toUpperCase());
 			}
 			bf.close();
 		} catch (IOException e) {
@@ -356,12 +372,17 @@ public class Elaborator {
 	 *  - aggiorna il contenuto dei nodi docx
 	 */
 	public void work() {
-		String tmp;
-		List<EntryPoint> curr_entryPoints, unchangeable;
-		List<StringBuilder> s_preMinimization = new ArrayList<>(), s_postMinimization = new ArrayList<>();
+		String plain;
+		StringBuilder sb;
+		List<StringBuilder> s_preMinimization = new ArrayList<>(),
+				s_postMinimization = new ArrayList<>();
+		List<EntryPoint> docx_entryPoints, minimization_entryPoints, unchangeable, eps;
+		List<List<EntryPoint>> allMatchingEps = new ArrayList<>();
 		
-		if(persone.isEmpty())
+		if(persone.isEmpty()) {
+			automatic = true;
 			enableDictionaries();
+		}
 		
 		if(App.debug) {
 			System.out.println("=====================================================================");
@@ -370,14 +391,24 @@ public class Elaborator {
 		}
 		
 		// pre-processamento di plainTexts per ottimizzazione: segnalo i blocchi semantici che "verosimilmente" contengono nominativi
-		// sono sostituiti i plainText che non contengono nominativi con StringBuilder vuoti
+		// i plainText che non contengono nominativi sono sostituiti con StringBuilder vuoti
 		int n = 0; // --- variabile usate solo per stampe
-		for(StringBuilder s : plainTexts.getPlainTexts()) {
-			if(Persona.preprocess(s.toString())) {
-				s_preMinimization.add(s);
+		for(int index = 0; index < plainTexts.getPlainTexts().size(); index++) {
+			sb = plainTexts.getPlainTexts().get(index);
+			eps = Persona.preprocess(sb.toString(), index);
+			unchangeable = new ArrayList<>();
+			for(Persona p: keepUnchanged) {
+				plainTexts.markUnchangeableEntryPoints(unchangeable, p.getRegex(), index);
+			}
+			updateUnchangeableViaConfig(unchangeable, index);
+			if(eps.size() > 0) {
+				StringBuilder enlighted = enlightNominatives(sb, eps, unchangeable);
+				eps = recomputeEps(enlighted, index);
+				s_preMinimization.add(sb);
+				allMatchingEps.add(eps);
 				n++;
 				if(App.debug)
-					System.out.println(s.toString());
+					System.out.println(sb.toString());
 			}
 			else
 				s_preMinimization.add(new StringBuilder(""));
@@ -388,28 +419,80 @@ public class Elaborator {
 	    	System.out.println("Minimizzazione di " + n + " nodi Docx su un totale di " + s_preMinimization.size() + " nodi");
 	    	System.out.println("---------------------------------------------------------------------");
 		}
-		
 		// analizzo tutte le sotto-stringhe in cui ho raccolto i nodi Docx, filtrate dal pre-processamento
 		int index = 0;
+		int index_allMatchingEps = 0;
 		for(StringBuilder s : s_preMinimization) {
 			// se il testo deve essere minimizzato
 			if(!s.toString().equals("")) {
-				curr_entryPoints = plainTexts.getEntryPoints()
+				int finalIndex = index; // copia necessaria per lambda expression
+				docx_entryPoints = plainTexts.getEntryPoints()
 						.stream()
-						.filter(x -> x.getIndex_PlainText() == plainTexts.getPlainTexts().indexOf(s))
-						.collect(Collectors.toList());	
+						.filter(x -> x.getIndex_PlainText() == finalIndex)
+						.collect(Collectors.toList());
+				minimization_entryPoints = allMatchingEps.get(index_allMatchingEps);
+				index_allMatchingEps++;
 				// rimuovo le occorrenze dei nominativi di ogni persona
-				tmp = s.toString();
-				unchangeable = new ArrayList<>();
-				for(Persona p: keepUnchanged) {
-					plainTexts.markUnchangeableEntryPoints(unchangeable, p.getRegex(), index);
+				plain = s.toString();
+				if(automatic){
+					for(EntryPoint e : minimization_entryPoints){
+						String possibleNominative = plain.substring(e.getFrom(), e.getTo());
+						boolean found = false;
+						StringBuilder current_name = new StringBuilder();
+						StringBuilder current_surname = new StringBuilder();
+						// per ogni possibile nominativo salvo il relativo nome-cognome da inserire nel file di associazioni
+						for(String termine : possibleNominative.split("\\s")){
+							if (dictionary.contains(termine.toUpperCase())) {
+								found = true;
+								current_name.append(termine.toUpperCase()).append(" ");
+							} else {
+								current_surname.append(termine.toUpperCase()).append(" ");
+							}
+						}
+						// se almeno uno dei termini e' un nome, allora anonimizzo
+						if(found) {
+							String curr_id = utilsID.getID(possibleNominative);
+							Persona.updateDocxEntrypoints(docx_entryPoints, e.getFrom(), possibleNominative.length(), curr_id.length());
+							Persona.propagateChanges(curr_id, possibleNominative, minimization_entryPoints);
+							plain = plain.replaceFirst(possibleNominative, curr_id);
+							// aggiungo alla mappa delle associazioni l'id anononimo e la relativa coppia nome-cognome
+							if(!associationsMap.containsKey(curr_id)) {
+								String value = current_surname.toString() + current_name.toString();
+								associationsMap.put(curr_id, value.trim());
+							}
+						}
+					}
 				}
-				updateUnchangeableViaConfig(unchangeable, index);
-				for(Persona p : persone) {			
-					tmp = p.minimizza(tmp, curr_entryPoints, unchangeable);	
-			    }
-				// inserisco la stringa minimizzata nella lista temporanea "s_postMinimization"
-				s_postMinimization.add(new StringBuilder(tmp));
+				// se nominativi espressi in input
+ 				else {
+					for(EntryPoint e : minimization_entryPoints){
+						String possibleNominative = plain.substring(e.getFrom(), e.getTo());
+						for (Persona p : persone) {
+							// se una persona fa match, allora anonimizzo
+							if(p.match(possibleNominative)){
+								if(p.getId().equals("0")){
+									String curr_id = utilsID.getID(possibleNominative);
+									Persona.updateDocxEntrypoints(docx_entryPoints, e.getFrom(), possibleNominative.length(), curr_id.length());
+									Persona.propagateChanges(curr_id, possibleNominative, minimization_entryPoints);
+									plain = plain.replaceFirst(possibleNominative, curr_id);
+									p.setId(curr_id);
+								}
+								else {
+									Persona.updateDocxEntrypoints(docx_entryPoints, e.getFrom(), possibleNominative.length(), p.getId().length());
+									Persona.propagateChanges(p.getId(), possibleNominative, minimization_entryPoints);
+									plain = plain.replaceFirst(possibleNominative, p.getId());
+								}
+								break;
+							}
+						}
+					}
+					// riempio mappa associazioni id-cognome nome
+					for (Persona p : persone) {
+						associationsMap.put(p.getId(), p.getNameSurnameAssociationsValue());
+					}
+				}
+ 				// inserisco stringa minimizzata
+				s_postMinimization.add(new StringBuilder(plain));
 			} 
 			// se il testo non deve essere minimizzato
 			else {
@@ -427,6 +510,33 @@ public class Elaborator {
 		
 		// aggiorno il contenuto dei nodi Docx
 		updateEntryPoints();
+
+		// creo il file di associazioni id - nome cognome ordinando alfabeticamente per cognome
+		if(App.debug) {
+			System.out.println("=====================================================================");
+			System.out.println("Scrittura del file di associazioni id-cognome nome");
+		}
+		associationsMap.entrySet().stream()
+				.sorted(Map.Entry.comparingByValue())
+				.forEach(e -> {
+					try {
+						if(!e.getKey().equals("0")) {
+							String association = e.getValue() + " -> " + e.getKey();
+							outputFileAssociations.write(association.replaceAll("\\s+", " ") + "\n");
+						}
+					} catch (IOException ioException) {
+						System.out.println("Eccezione durante la scrittura nel file di associazioni: " + outputFileAssociations);
+						ioException.printStackTrace();
+						System.exit(6);
+					}
+				});
+		try {
+			outputFileAssociations.close();
+		} catch(IOException e) {
+			System.out.println("Eccezione durante la chiusura del file di associazioni: " + outputFileAssociations);
+			e.printStackTrace();
+			System.exit(7);
+		}
 		
 		if(App.debug) {
 			System.out.println("=====================================================================");
@@ -435,11 +545,58 @@ public class Elaborator {
 
 	}
 
+	private List<EntryPoint> recomputeEps(StringBuilder enlighted, int index) {
+		List<EntryPoint> eps = new ArrayList<>();
+		boolean seekFirst = true;
+		int from = -1;
+		for(int i = 0; i < enlighted.toString().length(); i++){
+			if (seekFirst && enlighted.charAt(i) != '_') {
+				from = i;
+				seekFirst = false;
+			}
+			else if(!seekFirst && enlighted.charAt(i) == '_'){
+				// salvo EntryPoint solo se c'e' ancora un'espressione anonimizzabile dopo aver aggiunto 'unchangeable'
+				if (Persona.preprocess(enlighted.toString(), -1).size() > 0)
+					eps.add(new EntryPoint(null, index, from, i));
+				seekFirst = true;
+			}
+		}
+		//caso in cui un EntryPoint con un nominativo comprenda l'ultimo carattere di 'enlighted'
+		if(!seekFirst)
+			eps.add(new EntryPoint(null, index, from, enlighted.toString().length()));
+		return eps;
+	}
+
+	/**
+	 * Lorenzo Amorosa mangia => Lorenzo Amorosa _____
+	 *
+	 * @param s
+	 * @param eps
+	 * @param unchangeable
+	 * @return
+	 */
+	private StringBuilder enlightNominatives(StringBuilder s, List<EntryPoint> eps, List<EntryPoint> unchangeable) {
+		StringBuilder res =  new StringBuilder();
+		for(int i = 0; i < s.toString().length(); i++)
+			res.append("_");
+		for(EntryPoint e : eps)
+			res.replace(e.getFrom(), e.getTo(), s.substring(e.getFrom(), e.getTo()));
+		for(EntryPoint e : unchangeable)
+			res.replace(e.getFrom(), e.getTo(), pad('_', e.getTo() - e.getFrom()));
+		return res;
+	}
+
+	private String pad(char c, int dim) {
+		StringBuilder res = new StringBuilder();
+		for(int i = 0; i < dim; i++)
+			res.append(c);
+		return res.toString();
+	}
+
 	/**
 	 * Inizializzazione di una lista di persone impiegando i dizionari di nomi
 	 */
 	private void enableDictionaries() {
-		List<String> nomi = new ArrayList<>();
 		String nome;
 		persone = new ArrayList<>();
 		
@@ -448,34 +605,27 @@ public class Elaborator {
 	    	System.out.println("Caricamento dei dizionari");
 	    	System.out.println();
 		}
-		
+		// ci sono 14590 nomi (IT + EN)
 		try {
-			String f_name = "dictionaries" + File.separator + "IT.txt";
-			BufferedReader bf = new BufferedReader(new FileReader(f_name));
+			String f_name = "/" + "dictionaries" + "/" + "IT.txt";
+			BufferedReader bf = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(f_name)));
 			while((nome = bf.readLine()) != null)
-				nomi.add(nome);
+				dictionary.add(nome);
 			bf.close();
-			f_name = "dictionaries" + File.separator + "EN.txt";
-			bf = new BufferedReader(new FileReader(f_name));
+			f_name = "/" + "dictionaries" + "/" + "EN.txt";
+			bf = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(f_name)));
 			while((nome = bf.readLine()) != null)
-				nomi.add(nome);
+				dictionary.add(nome);
 			bf.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(5);
 		}
-		
-		// sono 14590 nomi (IT + EN)
-		int id = 1;
-		for (String n : nomi) {
-			persone.add(new Persona(n, id));
-			id += 1;
-		}
-		
+
 	}
-	
-	private void updateUnchangeableViaConfig(List<EntryPoint> unchangeable, int index) {	
-		plainTexts.markUnchangeableEntryPoints(unchangeable, toKeepViaConfig, index);	
+
+	private void updateUnchangeableViaConfig(List<EntryPoint> unchangeable, int index) {
+		plainTexts.markUnchangeableEntryPoints(unchangeable, toKeepViaConfig, index);
 	}
 	
 	/**
@@ -508,7 +658,7 @@ public class Elaborator {
 	
 	/**
 	 * Check gerarchia dei padri nodo run
-	 * @param tmp nodo run del quale si analizza la gerarchia
+	 * @param run nodo run del quale si analizza la gerarchia
 	 */
 	private void check_padri_run(R run) {
 		Object tmp = run;
@@ -620,7 +770,7 @@ public class Elaborator {
 	 * 	 - viene ignorato o
 	 * 	 - viene segnalata la fine del "blocco semantico"
 	 * 
-	 * @param run_bro singolo nodo <w:r> del quale si analizza il contenuto, aggiornando plainTexts
+	 * @param run singolo nodo <w:r> del quale si analizza il contenuto, aggiornando plainTexts
 	 * 
 	 */
 	private void analyse_run(R run) {
@@ -847,7 +997,7 @@ public class Elaborator {
 
 	/**
 	 * 
-	 * @param parent questo nodo e' padre DIRETTO di <w:r>, operazioni di 'unwrapping' gia' effettuate
+	 * @param initial_parent questo nodo e' padre DIRETTO di <w:r>, operazioni di 'unwrapping' gia' effettuate
 	 * @param run_brothers lista gia' inizializzata di nodi R (e fratelli) contenuti complessivamente in Tr, 'live list' non 'snapshot'
 	 * 
 	 * osservazione: i nodi <w:p>, <w:del> etc. potrebbero contenere <w:r> direttamente ma, allo stesso tempo, ulteriori wrapper in-inline

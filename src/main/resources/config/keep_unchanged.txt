@@ -1,0 +1,6 @@
+Al\s+Sindaco
+Il\s+Sindaco
+Il\s+Sottoscritto
+La\s+Sottoscritta
+Al\s+Sottoscritto
+Alla\s+Sottoscritta

@@ -90,7 +90,7 @@ public class PlainTexts {
 
 	/**
 	 * Metodo che consente di markare come non modificabili dei nodi Docx e il relativo contenuto
-	 * 
+	 *
 	 * @param unchangeable lista di entryPoint che non deve essere processata da Elaborator
 	 * @param regex espressione con cui determinare gli entryPoint da aggiungere a unchangeable
 	 * @param index l'indice dello StringBuilder che contiene la porzione di testo relativa alla lista unchangeable
@@ -100,7 +100,7 @@ public class PlainTexts {
 		int from = 0;
 		boolean continua;
 		Matcher matcher;
-		
+
 		do {
 			continua = false;
 			matcher = Pattern.compile(regex).matcher(text);
@@ -109,8 +109,8 @@ public class PlainTexts {
 				unchangeable.add(new EntryPoint(null, index, matcher.start(), matcher.end()));
 				from = matcher.end() - 1;
 			}
-		} while(continua);	
-		
+		} while(continua);
+
 	}
 	
 }
@@ -152,6 +152,11 @@ class EntryPoint{
 
 	public void setTo(int to) {
 		this.to = to;
+	}
+
+	@Override
+	public String toString(){
+		return "[" + this.from + " to " + this.to + "]";
 	}
 	
 }
