@@ -3,6 +3,8 @@ Stand-alone Java tool to anonymize OOXML Documents (docx). This software helps t
 
 The suffix *core* helps to distinguish it from [DocxAnonymizer-spark](https://github.com/Lostefra/DocxAnonymizer-spark). Both software perform the same tasks, but [DocxAnonymizer-core](https://github.com/Lostefra/DocxAnonymizer-core) can work only on a single machine, whereas [DocxAnonymizer-spark](https://github.com/Lostefra/DocxAnonymizer-spark) can work either locally or on a cluster with Apache Spark.
 
+The default branch *fast* contains the most optimized code. 
+
 ## Workflow
 
 Given a **complex** and **rich-formatted docx** file, the program extrapolates all the text, it **anonymizes** its content and then it saves a new docx **without altering its original structure and layout**.
