@@ -1,5 +1,5 @@
 # DocxAnonymizer-core
-Stand-alone Java tool to anonymize OOXML Documents (docx). This software helps to make docx documents compliant to [General Data Protection Regulation 2016/679 (**GDPR**)](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ITA&toc=OJ:L:2016:119:TOC).
+Docx Anonymizer is a stand-alone Java tool to anonymize OOXML Documents (docx). This software helps to make docx documents compliant to [General Data Protection Regulation 2016/679 (**GDPR**)](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ITA&toc=OJ:L:2016:119:TOC).
 
 The suffix *core* helps to distinguish it from [DocxAnonymizer-spark](https://github.com/Lostefra/DocxAnonymizer-spark). Both software perform the same tasks, but [DocxAnonymizer-core](https://github.com/Lostefra/DocxAnonymizer-core) can work only on a single machine, whereas [DocxAnonymizer-spark](https://github.com/Lostefra/DocxAnonymizer-spark) can work either locally or on a cluster with Apache Spark.
 
